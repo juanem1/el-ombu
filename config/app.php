@@ -145,6 +145,11 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+        /*
+		 * Vendor
+		 */
+        'Intervention\Image\ImageServiceProvider'
+
 	],
 
 	/*
@@ -193,6 +198,7 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
+        'Image'     => 'Intervention\Image\Facades\Image'
 	],
 
 ];
