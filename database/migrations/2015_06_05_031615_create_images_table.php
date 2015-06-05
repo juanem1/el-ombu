@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOffersTable extends Migration {
+class CreateImagesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,11 @@ class CreateOffersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('offers', function(Blueprint $table)
+		Schema::create('images', function(Blueprint $table)
 		{
 			$table->increments('id');
             $table->integer('gallery_id');
-			$table->text('title');
-			$table->mediumText('shortDescription');
-			$table->longText('longDescription');
-			$table->decimal('price');
+            $table->text('name');
 			$table->timestamps();
 		});
 	}
@@ -31,7 +28,7 @@ class CreateOffersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('offers');
+		Schema::drop('images');
 	}
 
 }

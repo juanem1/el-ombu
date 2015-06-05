@@ -18,7 +18,6 @@ class CreateGalleriesTable extends Migration {
             $table->text('title');
             $table->text('slug');
 			$table->longText('description');
-			$table->longText('images');
 			$table->timestamps();
 		});
 	}
