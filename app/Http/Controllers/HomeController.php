@@ -1,26 +1,15 @@
 <?php namespace App\Http\Controllers;
 
+use App\Repositories\OffersRepository;
+
 class HomeController extends Controller {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
-	|
-	*/
+    protected $repository;
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct()
+	public function __construct(OffersRepository $repo)
 	{
-		$this->middleware('auth');
+		//$this->middleware('auth');
+        $this->repository = $repo;
 	}
 
 	/**
@@ -30,7 +19,8 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+        $offers = $this->repository->getHomeOffers()->toArray();
+        return view('home.index', ['offers' => $offers]);
 	}
 
 }
