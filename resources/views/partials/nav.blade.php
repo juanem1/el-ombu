@@ -6,8 +6,8 @@
 
             <!-- Logo ============================================= -->
             <div id="logo">
-                <a href="/" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt=""></a>
-                <a href="/" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt=""></a>
+                <a href="/" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="El Ombu logo"></a>
+                <a href="/" class="retina-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="El Ombu logo"></a>
             </div>
             <!-- #logo end -->
 
@@ -47,17 +47,17 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><div>Tecnica</div></a>
+                        <a href="{{ route('fichaTecnica') }}"><div>Tecnica</div></a>
                         <ul>
-                            <li><a href="#"><div>Ficha tecnica</div></a></li>
-                            <li><a href="#"><div>Vea como se construye su vivienda en 9 pasos</div></a></li>
+                            <li><a href="{{ route('fichaTecnica') }}"><div>Ficha tecnica</div></a></li>
+                            <li><a href="{{ route('vivienda') }}"><div>Vea como se construye su vivienda en 9 pasos</div></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><div>La empresa</div></a>
+                        <a href="{{ route('laEmpresa') }}"><div>La empresa</div></a>
                     </li>
                     <li>
-                        <a href="#"><div>Contacto</div></a>
+                        <a href="{{ route('contact.index') }}"><div>Contacto</div></a>
                     </li>
                 </ul>
             </nav>
