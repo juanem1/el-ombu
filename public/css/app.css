@@ -25485,6 +25485,10 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 #header.full-header #primary-menu ul ul a {
   height: auto !important;
 }
+#header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo img {
+  height: 40px;
+  margin: 10px 0;
+}
 #footer {
   background: url('/images/footer-bg.jpg') repeat;
   background-size: 100% 100%;
