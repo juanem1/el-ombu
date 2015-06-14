@@ -12,7 +12,7 @@ Route::controllers([
 
 // Complejos
 Route::resource('complex', 'ComplexController');
-Route::get('complejos/{name}', ['as' => 'complejos.show', 'uses' => 'ComplexController@show']);
+Route::get('complejos/{name}', ['as' => 'complejos.show', 'uses' => 'ComplexController@view']);
 
 // Galerias
 Route::resource('gallery', 'GalleryController');
