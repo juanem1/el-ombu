@@ -40,7 +40,7 @@
                     <div class="col-md-4">
                         <div class="feature-box fbox-center fbox-effect">
                             <div class="fbox-icon">
-                                <a href="#"><i class="icon-credit i-alt"></i></a>
+                                <a href="{{ route('formasDePago') }}"><i class="icon-credit i-alt"></i></a>
                             </div>
                             <h3>Formas de pago</h3>
                         </div>
@@ -48,7 +48,7 @@
                     <div class="col-md-4">
                         <div class="feature-box fbox-center fbox-effect">
                             <div class="fbox-icon">
-                                <a href="#"><i class="icon-measure i-alt"></i></a>
+                                <a href="{{ route('fichaTecnica') }}"><i class="icon-measure i-alt"></i></a>
                             </div>
                             <h3>Caracteristicas técnicas</h3>
                         </div>
@@ -56,7 +56,7 @@
                     <div class="col-md-4">
                         <div class="feature-box fbox-center fbox-effect">
                             <div class="fbox-icon">
-                                <a href="#"><i class="icon-wrench i-alt"></i></a>
+                                <a href="{{ route('vivienda') }}"><i class="icon-wrench i-alt"></i></a>
                             </div>
                             <h3>Construir en nueve pasos</h3>
                         </div>
