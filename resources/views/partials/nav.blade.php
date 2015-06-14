@@ -39,11 +39,11 @@
                     <li>
                         <a href="#"><div>Complejos turisticos</div></a>
                         <ul>
-                            <li><a href="#"><div>Complejo Zafiro</div></a></li>
-                            <li><a href="#"><div>Complejo Onix</div></a></li>
-                            <li><a href="#"><div>Complejo Esmeralda</div></a></li>
-                            <li><a href="#"><div>Complejo Rubí</div></a></li>
-                            <li><a href="#"><div>Complejo Cornalina</div></a></li>
+                            <li><a href="{{ route('complejos.show', 'zafiro') }}"><div>Complejo Zafiro</div></a></li>
+                            <li><a href="{{ route('complejos.show', 'onix') }}"><div>Complejo Onix</div></a></li>
+                            <li><a href="{{ route('complejos.show', 'esmeralda') }}"><div>Complejo Esmeralda</div></a></li>
+                            <li><a href="{{ route('complejos.show', 'rubi') }}"><div>Complejo Rubí</div></a></li>
+                            <li><a href="{{ route('complejos.show', 'cornalina') }}"><div>Complejo Cornalina</div></a></li>
                         </ul>
                     </li>
                     <li>
