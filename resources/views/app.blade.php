@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="iBox design studio" />
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <title>Viviendas Americanas El Ombú | Empresa Constructora S.R.L. | Una raza que crece fuerte</title>
 
     <!-- Stylesheets ============================================= -->
@@ -37,8 +37,8 @@
 <div id="gotoTop" class="icon-angle-up"></div>
 
 <!-- Footer Scripts ============================================= -->
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/plugins.js"></script>
 @yield('scripts')
 
 </body>
