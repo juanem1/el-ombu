@@ -35,3 +35,6 @@ Route::get('vivienda', ['as' => 'vivienda', 'uses' => 'StaticsController@viviend
 
 // La empresa
 Route::get('la-empresa', ['as' => 'laEmpresa', 'uses' => 'StaticsController@empresa']);
+
+// Formas de pago
+Route::get('formas-de-pago', ['as' => 'formasDePago', 'uses' => 'StaticsController@formasDePago']);

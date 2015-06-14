@@ -55,6 +55,9 @@
                     </li>
                     <li>
                         <a href="{{ route('laEmpresa') }}"><div>La empresa</div></a>
+                        <ul>
+                            <li><a href="{{ route('formasDePago') }}"><div>Formas de pago</div></a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="{{ route('contact.index') }}"><div>Contacto</div></a>

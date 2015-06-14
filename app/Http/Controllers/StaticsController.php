@@ -22,4 +22,8 @@ class StaticsController extends Controller {
         return view('statics.la-empresa');
 	}
 
+    public function formasDePago()
+    {
+        return view('statics.formas-de-pagos');
+    }
 }
