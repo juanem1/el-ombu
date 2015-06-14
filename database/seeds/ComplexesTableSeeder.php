@@ -10,12 +10,14 @@ class ComplexesTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach(range(1, 5) as $index)
+        $complex = ['Zafiro', 'Onix', 'Esmeralda', 'Rubí', 'Cornalina'];
+
+        foreach($complex as $comp)
         {
             $title = $faker->sentence;
             Complex::create([
-                'title' => $title,
-                'slug' => str_slug($title),
+                'title' => $comp,
+                'slug' => str_slug($comp),
                 'description' => $faker->text(500),
                 'price' => $faker->randomNumber(5),
                 'gallery_id' => $faker->numberBetween(1, 50)
