@@ -6,8 +6,8 @@
 
             <!-- Logo ============================================= -->
             <div id="logo">
-                <a href="/" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="El Ombu logo"></a>
-                <a href="/" class="retina-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="El Ombu logo"></a>
+                <a href="/" class="standard-logo" data-dark-logo="/images/logo.png"><img src="/images/logo.png" alt="El Ombu logo"></a>
+                <a href="/" class="retina-logo" data-dark-logo="/images/logo.png"><img src="/images/logo.png" alt="El Ombu logo"></a>
             </div>
             <!-- #logo end -->
 
