@@ -16,9 +16,10 @@ class CreateComplexesTable extends Migration {
 		{
 			$table->increments('id');
             $table->integer('gallery_id');
-            $table->text('title');
-            $table->text('slug');
+            $table->string('title');
+            $table->string('slug');
             $table->longText('description');
+            $table->decimal('price');
             $table->mediumText('pdf');
 			$table->timestamps();
 		});
