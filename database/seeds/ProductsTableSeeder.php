@@ -14,7 +14,10 @@ class ProductsTableSeeder extends Seeder
         {
             Products::create([
                 'title' => $faker->sentence,
-                'description' => $faker->text(500),
+                'subTitle' => $faker->sentence,
+                'shortDescription' => $faker->text(140),
+                'longDescription' => $faker->text(500),
+                'price' => $faker->randomNumber(5),
                 'gallery_id' => $faker->numberBetween(1, 50)
             ]);
         }

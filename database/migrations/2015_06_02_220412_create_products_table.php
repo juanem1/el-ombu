@@ -17,7 +17,10 @@ class CreateProductsTable extends Migration {
 			$table->increments('id');
             $table->integer('gallery_id');
 			$table->text('title');
-			$table->longText('description');
+			$table->text('subTitle');
+            $table->mediumText('shortDescription');
+			$table->longText('longDescription');
+            $table->decimal('price');
             $table->mediumText('pdf');
 			$table->timestamps();
 		});
