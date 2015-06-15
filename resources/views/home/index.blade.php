@@ -9,7 +9,11 @@
         <div class="content-wrap">
             <div class="container clearfix">
 
-                @foreach(array_chunk($offers, 4) as $offerSubset)
+                <div class="fancy-title title-border-color title-center">
+                    <h2>Ofertas Destacadas</h2>
+                </div>
+
+                @foreach($offers->chunk(4) as $offerSubset)
                     <div class="row bottommargin">
                         @foreach($offerSubset as $offer)
                             <div class="col-md-3">
@@ -30,12 +34,12 @@
                     </div>
                 @endforeach
 
-            <div class="divider divider-rounded divider-center">
-                <i class="icon-home2"></i>
-            </div>
+                <div class="divider divider-rounded divider-center">
+                    <i class="icon-home2"></i>
+                </div>
 
-            <!-- 3 colum content -->
-            <div class="container clearfix">
+                <!-- 3 colum content -->
+                <div class="container clearfix">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="feature-box fbox-center fbox-effect">
@@ -64,6 +68,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
+            </div>
         </div>
     </section>
 
@@ -80,6 +85,7 @@
                 thumbnails: true,
                 height: '40%',
                 loader: 'pie',
+                fx: 'scrollHorz',
                 loaderPadding: 1,
                 loaderStroke: 5,
                 onLoaded: function() {

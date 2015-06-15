@@ -19,7 +19,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-        $offers = $this->repository->getHomeOffers()->toArray();
+        $offers = $this->repository->getHomeOffers();
         return view('home.index', ['offers' => $offers]);
 	}
 
