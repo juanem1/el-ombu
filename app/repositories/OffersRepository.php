@@ -5,8 +5,20 @@ use App\Offers;
 class OffersRepository
 {
 
+    /**
+     * @return mixed
+     */
     public function getHomeOffers() {
-        return $offers = Offers::with('products')->take(8)->get();
+        return Offers::with('products')->take(8)->get();
+    }
+
+    /**
+     * Get One product
+     * @param $slug
+     * @return mixed
+     */
+    public function find($slug) {
+        return Offers::with('products')->whereSlug($slug)->first();
     }
 
 //    /**
