@@ -17,16 +17,20 @@
                     <div class="row bottommargin">
                         @foreach($offerSubset as $offer)
                             <div class="col-md-3">
-                                <div class="feature-box media-box">
-                                    <div class="fbox-media">
-                                        <img src="{{$offer->products->images->first()->name}}" alt="Oferta">
+                                <div class="ipost clearfix">
+                                    <div class="entry-image">
+                                        <a href="#">
+                                            <img class="image_fade" src="{{$offer->products->images->first()->name}}" alt="Ofertas">
+                                        </a>
                                     </div>
-                                    <div class="fbox-desc">
+                                    <div class="entry-title">
                                         <h3>
-                                            {{$offer['title']}}
-                                            <span class="subtitle">$ {{$offer['price']}}</span>
+                                            <a href="#">{{$offer['title']}}</a>
                                         </h3>
                                     </div>
+                                    <ul class="entry-meta clearfix">
+                                        <li>$ {{$offer['price']}}</li>
+                                    </ul>
                                 </div>
                             </div>
                         @endforeach
