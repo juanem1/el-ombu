@@ -19,17 +19,19 @@
                             <div class="col-md-3">
                                 <div class="ipost clearfix">
                                     <div class="entry-image">
-                                        <a href="#">
+                                        <a href="{{ route('oferta.show', $offer->slug) }}">
                                             <img class="image_fade" src="{{$offer->products->images->first()->name}}" alt="Ofertas">
                                         </a>
                                     </div>
                                     <div class="entry-title">
                                         <h3>
-                                            <a href="#">{{$offer['title']}}</a>
+                                            <a href="{{ route('oferta.show', $offer->slug) }}">
+                                                {{ $offer->title }}
+                                            </a>
                                         </h3>
                                     </div>
                                     <ul class="entry-meta clearfix">
-                                        <li>$ {{$offer['price']}}</li>
+                                        <li>$ {{ $offer->price }}</li>
                                     </ul>
                                 </div>
                             </div>
