@@ -6,7 +6,7 @@ class OffersRepository
 {
 
     public function getHomeOffers() {
-        return $offers = Offers::with('images')->take(8)->get();
+        return $offers = Offers::with('products')->take(8)->get();
     }
 
 //    /**

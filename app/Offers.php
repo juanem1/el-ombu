@@ -7,14 +7,9 @@ class Offers extends Model {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function gallery()
+    public function products()
     {
-        return $this->hasOne('App\Gallery', 'id', 'gallery_id');
-    }
-
-    public function images()
-    {
-        return $this->hasMany('App\Images', 'gallery_id', 'gallery_id');
+        return $this->hasOne('App\Products', 'id', 'product_id');
     }
 
 }

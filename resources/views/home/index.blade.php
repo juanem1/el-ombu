@@ -19,7 +19,7 @@
                             <div class="col-md-3">
                                 <div class="feature-box media-box">
                                     <div class="fbox-media">
-                                        <img src="{{$offer['images'][0]['name']}}" alt="Oferta">
+                                        <img src="{{$offer->products->images->first()->name}}" alt="Oferta">
                                     </div>
                                     <div class="fbox-desc">
                                         <h3>
