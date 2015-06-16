@@ -17,6 +17,7 @@ class CreateOffersTable extends Migration {
 			$table->increments('id');
             $table->integer('product_id');
 			$table->text('title');
+			$table->text('slug');
 			$table->decimal('price');
 			$table->timestamps();
 		});
