@@ -1,8 +1,10 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Repositories\ProductsRepository;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller {
