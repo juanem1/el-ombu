@@ -1,11 +1,20 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Repositories\OffersRepository;
 use Illuminate\Http\Request;
 
 class OffersController extends Controller {
+
+    private $repository;
+
+    public function __construct(OffersRepository $repo)
+    {
+        $this->repository = $repo;
+    }
 
 	/**
 	 * Display a listing of the resource.
@@ -47,6 +56,17 @@ class OffersController extends Controller {
 	{
 		//
 	}
+
+    /**
+     * Show One product in the frontend
+     * @param $id Integer
+     * @return View
+     */
+    public function view($id)
+    {
+        $offer = $this->repository->find($id);
+        return view('offers.view', compact('offer'));
+    }
 
 	/**
 	 * Show the form for editing the specified resource.
