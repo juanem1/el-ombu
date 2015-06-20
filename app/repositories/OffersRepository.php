@@ -21,6 +21,14 @@ class OffersRepository
         return Offers::with('products')->whereSlug($slug)->first();
     }
 
+    /**
+     * Get all offers
+     * @return mixed
+     */
+    public function all() {
+        return Offers::with('products')->get();
+    }
+
 //    /**
 //     * Obtiene el inventario general
 //     */

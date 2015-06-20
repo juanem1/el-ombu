@@ -58,6 +58,16 @@ class OffersController extends Controller {
 	}
 
     /**
+     * Show all available offers
+     * @return View
+     */
+    public function showAll()
+    {
+        $offers = $this->repository->all();
+        return view('offers.showAll', compact('offers'));
+    }
+
+    /**
      * Show One product in the frontend
      * @param $id Integer
      * @return View
