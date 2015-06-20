@@ -21,6 +21,7 @@ Route::resource('gallery', 'GalleryController');
 Route::resource('offers', 'OffersController');
 
 // Show one product in the front page
+Route::get('ofertas', ['as' => 'ofertas', 'uses' => 'OffersController@showAll']);
 Route::get('oferta/{id}', ['as' => 'oferta.show', 'uses' => 'OffersController@view']);
 
 // Productos
