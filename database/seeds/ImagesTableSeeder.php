@@ -13,7 +13,7 @@ class ImagesTableSeeder extends Seeder
         foreach(range(1, 200) as $z) {
             Images::create([
                 'gallery_id' => $faker->numberBetween(1, 50),
-                'name' => $faker->imageUrl(800, 600)
+                'name' => '/images/1.jpg'
             ]);
         }
     }
