@@ -19,7 +19,7 @@
                         <a href="/"><div>Home</div></a>
                     </li>
                     <li>
-                        <a href="#"><div>Ofertas</div></a>
+                        <a href="{{ route('ofertas') }}"><div>Ofertas</div></a>
                     </li>
                     <li>
                         <a href="#"><div>Productos y precios</div></a>
