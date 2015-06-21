@@ -10,7 +10,28 @@ class GalleriesTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach(range(1, 50) as $index)
+        $galleries = [
+            'Casas',
+            'Cabañas',
+            'Interiores',
+            'Obradores y módulos habitacionales',
+            'Construcción',
+            'Materiales',
+            'La fábrica'
+        ];
+
+        // Main galleries
+        foreach($galleries as $gal)
+        {
+            Gallery::create([
+                'title' => $gal,
+                'slug' => str_slug($gal),
+                'description' => $faker->text(500)
+            ]);
+        }
+
+        // Extra gelleries
+        foreach(range(1, 10) as $index)
         {
             $title = $faker->sentence;
             Gallery::create([
