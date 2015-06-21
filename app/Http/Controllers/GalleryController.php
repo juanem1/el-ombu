@@ -1,9 +1,11 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
+use App\Gallery;
 
 class GalleryController extends Controller {
 
@@ -47,6 +49,19 @@ class GalleryController extends Controller {
 	{
 		//
 	}
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  String  $slug
+     * @return Response
+     */
+    public function view($slug)
+    {
+        $gallery = Gallery::whereSlug($slug)->first();
+
+        return view('gallery.view', compact('gallery'));
+    }
 
 	/**
 	 * Show the form for editing the specified resource.

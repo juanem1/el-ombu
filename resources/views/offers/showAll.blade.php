@@ -19,7 +19,7 @@
                                         <!-- Portfolio Image -->
                                         <div class="portfolio-image">
                                             <a href="#">
-                                                <img src="{{ $offer->products->images->first()->name }}" alt="Portfolio Title">
+                                                {{--<img src="{{ $offer->products->images->first()->name }}" alt="Portfolio Title">--}}
                                             </a>
                                             <div class="portfolio-overlay" data-lightbox="gallery">
                                                 @foreach($offer->products->images as $image)
