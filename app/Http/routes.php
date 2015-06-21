@@ -16,6 +16,7 @@ Route::get('complejos/{name}', ['as' => 'complejos.show', 'uses' => 'ComplexCont
 
 // Galerias
 Route::resource('gallery', 'GalleryController');
+Route::get('galeria/{name}', ['as' => 'galeria.view', 'uses' => 'GalleryController@view']);
 
 // Ofertas
 Route::resource('offers', 'OffersController');
