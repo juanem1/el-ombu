@@ -27,13 +27,13 @@
                     <li>
                         <a href="#"><div>Galerias</div></a>
                         <ul>
-                            <li><a href="#"><div>Casas</div></a></li>
-                            <li><a href="#"><div>Cabañas</div></a></li>
-                            <li><a href="#"><div>Interiores</div></a></li>
-                            <li><a href="#"><div>Obradores y módulos habitacionales</div></a></li>
-                            <li><a href="#"><div>Construcción</div></a></li>
-                            <li><a href="#"><div>Materiales</div></a></li>
-                            <li><a href="#"><div>La fábrica</div></a></li>
+                            <li><a href="{{ route('galeria.view', 'casas') }}"><div>Casas</div></a></li>
+                            <li><a href="{{ route('galeria.view', 'cabanas') }}"><div>Cabañas</div></a></li>
+                            <li><a href="{{ route('galeria.view', 'interiores') }}"><div>Interiores</div></a></li>
+                            <li><a href="{{ route('galeria.view', 'obradores-y-modulos-habitacionales') }}"><div>Obradores y módulos habitacionales</div></a></li>
+                            <li><a href="{{ route('galeria.view', 'construccion') }}"><div>Construcción</div></a></li>
+                            <li><a href="{{ route('galeria.view', 'materiales') }}"><div>Materiales</div></a></li>
+                            <li><a href="{{ route('galeria.view', 'la-fabrica') }}"><div>La fábrica</div></a></li>
                         </ul>
                     </li>
                     <li>
