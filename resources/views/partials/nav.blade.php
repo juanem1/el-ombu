@@ -25,7 +25,7 @@
                         <a href="#"><div>Productos y precios</div></a>
                     </li>
                     <li>
-                        <a href="#"><div>Galerias</div></a>
+                        <a href="{{ route('galeria.view', 'casas') }}"><div>Galerias</div></a>
                         <ul>
                             <li><a href="{{ route('galeria.view', 'casas') }}"><div>Casas</div></a></li>
                             <li><a href="{{ route('galeria.view', 'cabanas') }}"><div>Cabañas</div></a></li>
@@ -37,7 +37,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><div>Complejos turisticos</div></a>
+                        <a href="{{ route('complejos.show', 'zafiro') }}"><div>Complejos turisticos</div></a>
                         <ul>
                             <li><a href="{{ route('complejos.show', 'zafiro') }}"><div>Complejo Zafiro</div></a></li>
                             <li><a href="{{ route('complejos.show', 'onix') }}"><div>Complejo Onix</div></a></li>
