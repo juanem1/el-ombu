@@ -16,14 +16,12 @@ Route::get('complejos/{name}', ['as' => 'complejos.show', 'uses' => 'ComplexCont
 
 // Galerias
 Route::resource('gallery', 'GalleryController');
-Route::get('galeria/{name}', ['as' => 'galeria.view', 'uses' => 'GalleryController@view']);
+Route::get('galeria/{name}', ['as' => 'galeria.view', 'uses' => 'StaticsController@viewGallery']);
 
 // Ofertas
 Route::resource('offers', 'OffersController');
-
-// Show one product in the front page
-Route::get('ofertas', ['as' => 'ofertas', 'uses' => 'OffersController@showAll']);
-Route::get('oferta/{id}', ['as' => 'oferta.show', 'uses' => 'OffersController@view']);
+Route::get('ofertas', ['as' => 'ofertas', 'uses' => 'StaticsController@showAllOffers']);
+Route::get('oferta/{id}', ['as' => 'oferta.show', 'uses' => 'StaticsController@viewOffer']);
 
 // Productos
 Route::resource('products', 'ProductsController');
@@ -31,6 +29,10 @@ Route::resource('products', 'ProductsController');
 // Contacto
 Route::get('contacto', ['as' => 'contact.index', 'uses' => 'ContactController@index']);
 Route::post('contacto', ['as' => 'contact.store', 'uses' => 'ContactController@store']);
+
+// -------------
+// STATICS
+// -------------
 
 // Ficha tecnica
 Route::get('ficha-tecnica', ['as' => 'fichaTecnica', 'uses' => 'StaticsController@ficha']);
