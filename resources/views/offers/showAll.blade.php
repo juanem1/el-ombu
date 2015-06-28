@@ -33,7 +33,7 @@
                                         <!-- Portfolio Description -->
                                         <div class="portfolio-desc">
                                             <h3>
-                                                <a href="#">{{ $offer->title }}</a>
+                                                <a href="{{ route('oferta.show', $offer->slug) }}">{{ $offer->title }}</a>
                                             </h3>
                                             <span>$ {{ $offer->price }}</span>
                                         </div>
