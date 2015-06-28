@@ -149,7 +149,8 @@ return [
         /*
 		 * Vendor
 		 */
-        'Intervention\Image\ImageServiceProvider'
+        'Intervention\Image\ImageServiceProvider',
+        'Kris\LaravelFormBuilder\FormBuilderServiceProvider'
 
 	],
 
@@ -199,7 +200,8 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
         'Image'     => 'Intervention\Image\Facades\Image',
-        //'Markdown'  => 'GrahamCampbell\Markdown\Facades\Markdown'
+        //'Markdown'  => 'GrahamCampbell\Markdown\Facades\Markdown',
+        'FormBuilder' => 'Kris\LaravelFormBuilder\Facades\FormBuilder'
 	],
 
 ];
