@@ -5,28 +5,38 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Gallery;
+use Kris\LaravelFormBuilder\FormBuilder;
 
 class GalleryController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
+    public function __construct()
+    {
+        //$this->middleware('auth');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
 	public function index()
 	{
-		//
+
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 *
+	 * @param $formBuilder FormBuilder
 	 * @return Response
 	 */
-	public function create()
+	public function create(FormBuilder $formBuilder)
 	{
-		//
+        $form = $formBuilder->create('App\Forms\Galleries', [
+            'method' => 'POST',
+            'url' => route('gallery.store')
+        ]);
+
+        return view('gallery.create', compact('form'));
 	}
 
 	/**
@@ -49,19 +59,6 @@ class GalleryController extends Controller {
 	{
 		//
 	}
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  String  $slug
-     * @return Response
-     */
-    public function view($slug)
-    {
-        $gallery = Gallery::whereSlug($slug)->first();
-
-        return view('gallery.view', compact('gallery'));
-    }
 
 	/**
 	 * Show the form for editing the specified resource.
