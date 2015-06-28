@@ -18,7 +18,7 @@ class ProductsTableSeeder extends Seeder
                 'shortDescription' => $faker->text(140),
                 'longDescription' => $faker->text(500),
                 'price' => $faker->randomNumber(5),
-                'gallery_id' => $faker->numberBetween(1, 50)
+                'gallery_id' => $faker->numberBetween(1, 17)
             ]);
         }
     }
