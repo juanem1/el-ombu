@@ -23,7 +23,9 @@ class OffersController extends Controller {
 	 */
 	public function index()
 	{
-		//
+        $offers = $this->repository->all();
+
+		return view('offers.index', compact('offers'));
 	}
 
 	/**
@@ -56,16 +58,6 @@ class OffersController extends Controller {
 	{
 		//
 	}
-
-    /**
-     * Show One product in the frontend
-     * @param $id Integer
-     * @return View
-     */
-    public function view($id)
-    {
-        //
-    }
 
 	/**
 	 * Show the form for editing the specified resource.
