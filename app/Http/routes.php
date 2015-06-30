@@ -33,6 +33,9 @@ Route::resource('products', 'ProductsController');
 Route::get('contacto', ['as' => 'contact.index', 'uses' => 'ContactController@index']);
 Route::post('contacto', ['as' => 'contact.store', 'uses' => 'ContactController@store']);
 
+// Dashboard
+Route::get('dashboard', ['as' => 'dashboard.index', 'uses' => 'DashboardController@index']);
+
 // -------------
 // STATICS
 // -------------
