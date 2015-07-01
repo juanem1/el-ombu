@@ -13,6 +13,7 @@ class OffersController extends Controller {
 
     public function __construct(OffersRepository $repo)
     {
+        $this->middleware('auth');
         $this->repository = $repo;
     }
 

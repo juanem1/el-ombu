@@ -19,7 +19,7 @@ Route::resource('gallery', 'GalleryController');
 Route::get('galeria/{name}', ['as' => 'galeria.view', 'uses' => 'StaticsController@viewGallery']);
 
 // Images
-Route::resource('images', 'ImagesController');
+Route::resource('image', 'ImagesController');
 
 // Ofertas
 Route::resource('offers', 'OffersController');

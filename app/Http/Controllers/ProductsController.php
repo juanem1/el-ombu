@@ -13,6 +13,7 @@ class ProductsController extends Controller {
 
     public function __construct(ProductsRepository $repo)
     {
+        $this->middleware('auth');
         $this->repository = $repo;
     }
 

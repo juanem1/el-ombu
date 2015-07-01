@@ -1,15 +1,22 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Kris\LaravelFormBuilder\FormBuilder;
 use Illuminate\Http\Request;
+use App\Repositories\ImagesRepository;
 
-class ImagesController extends Controller {
+class ImagesController extends Controller
+{
 
-    public function __construct()
+    private $repository;
+
+    public function __construct(ImagesRepository $repo)
     {
         $this->middleware('auth');
+        $this->repository = $repo;
     }
 
 	/**
@@ -19,7 +26,9 @@ class ImagesController extends Controller {
 	 */
 	public function index()
 	{
-		//
+        $images = $this->repository->all();
+
+        return view('images.index', compact('images'));
 	}
 
 	/**
@@ -32,7 +41,7 @@ class ImagesController extends Controller {
 	{
         $form = $formBuilder->create('App\Forms\Images', [
             'method' => 'POST',
-            'url' => route('images.store')
+            'url' => route('image.store')
         ]);
 
         return view('images.create', compact('form'));
