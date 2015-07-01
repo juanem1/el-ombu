@@ -9,6 +9,13 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller {
 
+    private $repository;
+
+    public function __construct(ProductsRepository $repo)
+    {
+        $this->repository = $repo;
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -16,7 +23,9 @@ class ProductsController extends Controller {
 	 */
 	public function index()
 	{
-		//
+        $products = $this->repository->all();
+
+        return view('products.index', compact('products'));
 	}
 
 	/**
