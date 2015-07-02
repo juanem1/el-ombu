@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Repositories\GalleryRepository;
 use Illuminate\Http\Request;
 use Kris\LaravelFormBuilder\FormBuilder;
 
 class GalleryController extends Controller {
 
-    public function __construct()
+    private $repository;
+
+    public function __construct(GalleryRepository $repo)
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
+        $this->repository = $repo;
     }
 
     /**
@@ -21,7 +25,9 @@ class GalleryController extends Controller {
      */
 	public function index()
 	{
+        $galleries = $this->repository->all();
 
+        return view('gallery.index', compact('galleries'));
 	}
 
 	/**
