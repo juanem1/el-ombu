@@ -37,7 +37,7 @@
                 <div class="col_one_fifth nobottommargin">
                     <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
                         <div class="fbox-icon">
-                            <a href="{{ route('images.index') }}">
+                            <a href="{{ route('image.index') }}">
                                 <i class="noborder icon-photo"></i>
                             </a>
                         </div>
