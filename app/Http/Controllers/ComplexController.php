@@ -5,9 +5,18 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Images;
+use App\Repositories\ComplexRepository;
 use Illuminate\Http\Request;
 
 class ComplexController extends Controller {
+
+    private $repository;
+
+    public function __construct(ComplexRepository $repo)
+    {
+        $this->middleware('auth');
+        $this->repository = $repo;
+    }
 
 	/**
 	 * Display a listing of the resource.
@@ -16,7 +25,9 @@ class ComplexController extends Controller {
 	 */
 	public function index()
 	{
-		//
+        $complexes = $this->repository->all();
+
+        return view('complex.index', compact('complexes'));
 	}
 
 	/**
