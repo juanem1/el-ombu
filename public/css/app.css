@@ -28902,6 +28902,27 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 #header.full-header #primary-menu ul ul a {
   height: auto !important;
 }
+#primary-menu.style-2 {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  #primary-menu.style-2 > div > ul {
+    display: inline-block;
+    float: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #primary-menu > ul,
+  #primary-menu > div > ul {
+    margin-top: 50px!important;
+  }
+}
+#primary-menu.style-2 > div > ul ul {
+  text-align: left;
+}
+#primary-menu.style-2 > div > ul > li > a {
+  padding: 0 10px;
+}
 #header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo img {
   height: 40px;
   margin: 10px 0;

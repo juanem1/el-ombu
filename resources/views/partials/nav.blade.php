@@ -1,19 +1,22 @@
 <!-- Header ============================================= -->
-<header id="header" class="sticky-header">
+<header id="header" class="sticky-style-2">
+    <div class="container clearfix">
+        <div id="logo" class="divcenter">
+            <a href="/" class="standard-logo" data-dark-logo="/images/logo.png">
+                <img class="divcenter" src="/images/logo.png" alt="El Ombu logo" />
+            </a>
+            <a href="/" class="retina-logo" data-dark-logo="/images/logo.png">
+                <img class="divcenter" src="/images/logo.png" alt="El Ombu logo" />
+            </a>
+        </div>
+    </div>
     <div id="header-wrap">
-        <div class="container clearfix">
-            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
-            <!-- Logo ============================================= -->
-            <div id="logo">
-                <a href="/" class="standard-logo" data-dark-logo="/images/logo.png"><img src="/images/logo.png" alt="El Ombu logo"></a>
-                <a href="/" class="retina-logo" data-dark-logo="/images/logo.png"><img src="/images/logo.png" alt="El Ombu logo"></a>
-            </div>
-            <!-- #logo end -->
+        <nav id="primary-menu" class="style-2">
+            <div class="container clearfix">
 
-            <!-- Primary Navigation
-            ============================================= -->
-            <nav id="primary-menu">
+                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
                 <ul>
                     <li class="current">
                         <a href="/"><div>Home</div></a>
@@ -47,25 +50,23 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ route('fichaTecnica') }}"><div>Tecnica</div></a>
+                        <a href="{{ route('laEmpresa') }}"><div>La empresa</div></a>
+                    </li>
+                    <li>
+                        <a href="{{ route('fichaTecnica') }}"><div>Tipos de constricción</div></a>
                         <ul>
                             <li><a href="{{ route('fichaTecnica') }}"><div>Ficha tecnica</div></a></li>
                             <li><a href="{{ route('vivienda') }}"><div>Vea como se construye su vivienda en 9 pasos</div></a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="{{ route('laEmpresa') }}"><div>La empresa</div></a>
-                        <ul>
-                            <li><a href="{{ route('formasDePago') }}"><div>Formas de pago</div></a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{ route('formasDePago') }}"><div>Plan 50</div></a></li>
                     <li>
                         <a href="{{ route('contact.index') }}"><div>Contacto</div></a>
                     </li>
                 </ul>
-            </nav>
-            <!-- #primary-menu end -->
-        </div>
+            </div>
+        </nav>
+
     </div>
 </header>
 <!-- #header end -->
