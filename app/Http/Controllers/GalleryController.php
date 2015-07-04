@@ -63,7 +63,7 @@ class GalleryController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+        return $this->repository->show($id);
 	}
 
 	/**

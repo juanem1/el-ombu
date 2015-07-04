@@ -1,9 +1,9 @@
-@extends('app')
+@extends('layout/front')
 
 @section('content')
     <section id="page-title">
         <div class="container clearfix">
-            <h1>Offertas</h1>
+            <h1>Ofertas</h1>
         </div>
     </section>
 
@@ -46,8 +46,4 @@
             </div>
         </div>
     </section>
-@endsection
-
-@section('scripts')
-    <script type="text/javascript" src="/js/functions.js"></script>
 @endsection

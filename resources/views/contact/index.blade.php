@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout/front')
 
 @section('content')
     <section id="page-title">
@@ -75,7 +75,6 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="js/jquery.gmap.js"></script>
     <script type="text/javascript">

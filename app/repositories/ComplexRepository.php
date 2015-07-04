@@ -16,4 +16,14 @@ class ComplexRepository
         return Complex::all();
     }
 
+    /**
+     * Show one complex
+     * @param $id Integer
+     * @return mixed
+     */
+    public function show($id)
+    {
+        return Complex::find($id);
+    }
+
 }

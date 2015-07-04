@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout/front')
 
 @section('content')
     <section id="page-title">
@@ -35,8 +35,4 @@
             </div>
         </div>
     </section>
-@endsection
-
-@section('scripts')
-    <script type="text/javascript" src="/js/functions.js"></script>
 @endsection

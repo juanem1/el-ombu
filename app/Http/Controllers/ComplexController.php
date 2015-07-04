@@ -58,7 +58,7 @@ class ComplexController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+        return $this->repository->show($id);
 	}
 
     /**

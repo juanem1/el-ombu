@@ -16,4 +16,14 @@ class ImagesRepository
         return Images::all();
     }
 
+    /**
+     * Show one Image
+     * @param $id Integer
+     * @return mixed
+     */
+    public function show($id)
+    {
+        return Images::find($id);
+    }
+
 }

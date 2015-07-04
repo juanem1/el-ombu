@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout/back')
 
 @section('content')
     <section id="page-title" class="page-title-mini">

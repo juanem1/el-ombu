@@ -29,4 +29,14 @@ class OffersRepository
         return Offers::with('products')->get();
     }
 
+    /**
+     * Show one offer
+     * @param $id Integer
+     * @return mixed
+     */
+    public function show($id)
+    {
+        return Offers::find($id);
+    }
+
 }

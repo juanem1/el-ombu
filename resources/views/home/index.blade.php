@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout/front')
 
 @section('content')
 
@@ -82,7 +82,6 @@
 
 
 @section('scripts')
-    <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/jquery.camera.js"></script>
     {{-- Slider --}}
     <script type="text/javascript">

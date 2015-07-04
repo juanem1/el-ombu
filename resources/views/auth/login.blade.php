@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layout/front')
 
 @section('content')
     <section id="content">

@@ -19,19 +19,9 @@
 
 <body class="no-transition stretched">
 
-<!-- Document Wrapper ============================================= -->
-<div id="wrapper" class="clearfix">
-
-    @include('partials/nav')
-
-    <!-- Content -->
-    @yield('content')
-    <!-- content end -->
-
-    @include('partials/footer')
-
-</div>
-<!-- #wrapper end -->
+<!-- Content -->
+@yield('mainContent')
+<!-- content end -->
 
 <!-- Go To Top ============================================= -->
 <div id="gotoTop" class="icon-angle-up"></div>
@@ -39,6 +29,7 @@
 <!-- Footer Scripts ============================================= -->
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/js/plugins.js"></script>
+<script type="text/javascript" src="/js/functions.js"></script>
 @yield('scripts')
 
 </body>

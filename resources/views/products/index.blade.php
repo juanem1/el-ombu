@@ -1,12 +1,6 @@
-@extends('app')
+@extends('layout/back')
 
 @section('content')
-    <section id="page-title" class="page-title-mini">
-        <div class="container clearfix">
-            <h1>Administrar productos</h1>
-        </div>
-    </section>
-
     <section id="content">
         <div class="content-wrap">
             <div class="container clearfix">
@@ -57,7 +51,6 @@
             </div>
         </div>
     </section>
-
 @endsection
 
 @section('scripts')

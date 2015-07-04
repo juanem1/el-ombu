@@ -16,4 +16,14 @@ class GalleryRepository
         return Gallery::all();
     }
 
+    /**
+     * Show one gallery
+     * @param $id Integer
+     * @return mixed
+     */
+    public function show($id)
+    {
+        return Gallery::find($id);
+    }
+
 }
