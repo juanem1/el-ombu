@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\Repositories\ProductsRepository;
-use Illuminate\Http\Request;
 use Kris\LaravelFormBuilder\FormBuilder;
+use App\Http\Requests\UpdateProductsRequest;
 
-class ProductsController extends Controller {
+class ProductsController extends Controller
+{
 
     private $repository;
 
@@ -83,12 +83,14 @@ class ProductsController extends Controller {
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param  $id
+	 * @param  $request
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, UpdateProductsRequest $request)
 	{
-		//
+        $this->repository->find($id)->update($request->all());
+        return redirect()->route('products.index')->withSuccess(true);
 	}
 
 	/**

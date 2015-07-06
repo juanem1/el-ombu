@@ -1,14 +1,14 @@
-<?php namespace App\Http\Controllers;
+<?php
 
-use App\Complex;
+namespace App\Http\Controllers;
+
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Kris\LaravelFormBuilder\FormBuilder;
-use App\Images;
 use App\Repositories\ComplexRepository;
-use Illuminate\Http\Request;
+use App\Http\Requests\UpdateComplexRequest;
 
-class ComplexController extends Controller {
+class ComplexController extends Controller
+{
 
     private $repository;
 
@@ -79,12 +79,14 @@ class ComplexController extends Controller {
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param  $id
+     * @param  $request
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, UpdateComplexRequest $request)
 	{
-		//
+        $this->repository->find($id)->update($request->all());
+        return redirect()->route('complex.index')->withSuccess(true);
 	}
 
 	/**

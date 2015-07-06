@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Kris\LaravelFormBuilder\FormBuilder;
-use Illuminate\Http\Request;
 use App\Repositories\ImagesRepository;
+use App\Http\Requests\UpdateImagesRequest;
 
 class ImagesController extends Controller
 {
@@ -79,12 +78,14 @@ class ImagesController extends Controller
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param  $id
+	 * @param  $request
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, UpdateImagesRequest $request)
 	{
-		//
+        $this->repository->find($id)->update($request->all());
+        return redirect()->route('images.index')->withSuccess(true);
 	}
 
 	/**

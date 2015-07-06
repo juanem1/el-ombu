@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\Repositories\GalleryRepository;
-use Illuminate\Http\Request;
 use Kris\LaravelFormBuilder\FormBuilder;
+use App\Http\Requests\UpdateGalleryRequest;
 
-class GalleryController extends Controller {
+class GalleryController extends Controller
+{
 
     private $repository;
 
@@ -77,12 +77,14 @@ class GalleryController extends Controller {
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param  $id
+     * @param  $request
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, UpdateGalleryRequest $request)
 	{
-		//
+        $this->repository->find($id)->update($request->all());
+        return redirect()->route('gallery.index')->withSuccess(true);
 	}
 
 	/**
