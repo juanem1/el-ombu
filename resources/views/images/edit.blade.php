@@ -3,7 +3,7 @@
 @section('content')
     <section id="page-title" class="page-title-mini">
         <div class="container clearfix">
-            <h1>Crear producto</h1>
+            <h1>Editar Imagen</h1>
         </div>
     </section>
 

@@ -18,8 +18,7 @@
                             <th>Nombre</th>
                             <th>Precio</th>
                             <th>Galeria asociada</th>
-                            <th class="text-center">Ver</th>
-                            <th class="text-center">Editar</th>
+                            <th class="text-center">Ver / Editar</th>
                             <th class="text-center">Eliminar</th>
                         </tr>
                     </thead>
@@ -35,17 +34,12 @@
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver detalle del complejo" href="{{ route('image.show', $complex->id) }}">
-                                    <i class="icon-line2-magnifier-add"></i>
-                                </a>
-                            </td>
-                            <td class="text-center">
-                                <a data-toggle="tooltip" title="Editar complejo" href="{{ route('image.edit', $complex->id) }}">
+                                <a data-toggle="tooltip" title="Ver/Editar complejo" href="{{ route('complex.edit', $complex->id) }}">
                                     <i class="icon-pencil2"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Eliminar complejo" href="{{ route('image.destroy', $complex->id) }}">
+                                <a data-toggle="tooltip" title="Eliminar complejo" href="{{ route('complex.destroy', $complex->id) }}">
                                     <i class="icon-line2-close"></i>
                                 </a>
                             </td>

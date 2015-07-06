@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Repositories\OffersRepository;
 use Illuminate\Http\Request;
+use Kris\LaravelFormBuilder\FormBuilder;
 
 class OffersController extends Controller {
 
@@ -29,15 +30,21 @@ class OffersController extends Controller {
 		return view('offers.index', compact('offers'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @param $formBuilder
+     * @return Response
+     */
+    public function create(FormBuilder $formBuilder)
+    {
+        $form = $formBuilder->create('App\Forms\Offers', [
+            'method' => 'POST',
+            'url' => route('offers.store'),
+        ]);
+
+        return view('offers.create', compact('form'));
+    }
 
 	/**
 	 * Store a newly created resource in storage.
@@ -57,19 +64,21 @@ class OffersController extends Controller {
 	 */
 	public function show($id)
 	{
-        return $this->repository->show($id);
+        return redirect()->route('offers.edit', $id);
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  $id
+     * @param  $formBuilder
+     * @return Response
+     */
+    public function edit($id, FormBuilder $formBuilder)
+    {
+        $model = $this->repository->find($id);
+        return $this->makeEdit('offers', $model, $formBuilder);
+    }
 
 	/**
 	 * Update the specified resource in storage.

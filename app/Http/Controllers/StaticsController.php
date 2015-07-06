@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Gallery;
+use App\Repositories\ComplexRepository;
 use Illuminate\Http\Request;
 use App\Repositories\OffersRepository;
 
@@ -72,5 +73,17 @@ class StaticsController extends Controller {
     {
         $offer = $repo->find($id);
         return view('offers.view', compact('offer'));
+    }
+
+    /**
+     * Display the specified complex by its slug
+     *
+     * @param  String $slug
+     * @return Response
+     */
+    public function viewComplex($slug, ComplexRepository $repo)
+    {
+        $params = $repo->view($slug);
+        return view('complex.view', $params);
     }
 }

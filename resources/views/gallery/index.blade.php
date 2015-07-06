@@ -16,8 +16,7 @@
                         <tr>
                             <th>#</th>
                             <th>Titulo</th>
-                            <th class="text-center">Ver</th>
-                            <th class="text-center">Editar</th>
+                            <th class="text-center">Ver / Editar</th>
                             <th class="text-center">Eliminar</th>
                         </tr>
                     </thead>
@@ -27,17 +26,12 @@
                             <td>{{ $gallery->id }}</td>
                             <td>{{ $gallery->title }}</td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver detalle del complejo" href="{{ route('gallery.show', $gallery->id) }}">
-                                    <i class="icon-line2-magnifier-add"></i>
-                                </a>
-                            </td>
-                            <td class="text-center">
-                                <a data-toggle="tooltip" title="Editar complejo" href="{{ route('gallery.edit', $gallery->id) }}">
+                                <a data-toggle="tooltip" title="Ver/Editar galeria" href="{{ route('gallery.edit', $gallery->id) }}">
                                     <i class="icon-pencil2"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Eliminar complejo" href="{{ route('gallery.destroy', $gallery->id) }}">
+                                <a data-toggle="tooltip" title="Eliminar galeria" href="{{ route('gallery.destroy', $gallery->id) }}">
                                     <i class="icon-line2-close"></i>
                                 </a>
                             </td>

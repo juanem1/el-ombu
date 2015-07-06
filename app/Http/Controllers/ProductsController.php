@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Repositories\ProductsRepository;
 use Illuminate\Http\Request;
+use Kris\LaravelFormBuilder\FormBuilder;
 
 class ProductsController extends Controller {
 
@@ -31,12 +32,18 @@ class ProductsController extends Controller {
 
 	/**
 	 * Show the form for creating a new resource.
-	 *
+     *
+	 * @param $formBuilder
 	 * @return Response
 	 */
-	public function create()
+	public function create(FormBuilder $formBuilder)
 	{
-		//
+        $form = $formBuilder->create('App\Forms\Products', [
+            'method' => 'POST',
+            'url' => route('products.store'),
+        ]);
+
+        return view('products.create', compact('form'));
 	}
 
 	/**
@@ -57,18 +64,20 @@ class ProductsController extends Controller {
 	 */
 	public function show($id)
 	{
-		return $this->repository->show($id);
+        return redirect()->route('products.edit', $id);
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  $id
+	 * @param  $formBuilder
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($id, FormBuilder $formBuilder)
 	{
-		//
+        $model = $this->repository->find($id);
+        return $this->makeEdit('products', $model, $formBuilder);
 	}
 
 	/**

@@ -12,8 +12,7 @@
                             <th>Titulo</th>
                             <th>Precio</th>
                             <th>Galleria</th>
-                            <th class="text-center">Ver</th>
-                            <th class="text-center">Editar</th>
+                            <th class="text-center">Ver / Editar</th>
                             <th class="text-center">Eliminar</th>
                         </tr>
                     </thead>
@@ -29,12 +28,7 @@
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver detalle del producto" href="{{ route('products.show', $product->id) }}">
-                                    <i class="icon-line2-magnifier-add"></i>
-                                </a>
-                            </td>
-                            <td class="text-center">
-                                <a data-toggle="tooltip" title="Editar producto" href="{{ route('products.edit', $product->id) }}">
+                                <a data-toggle="tooltip" title="Ver/Editar producto" href="{{ route('products.edit', $product->id) }}">
                                     <i class="icon-pencil2"></i>
                                 </a>
                             </td>

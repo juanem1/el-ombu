@@ -37,12 +37,7 @@ class GalleryController extends Controller {
 	 */
 	public function create(FormBuilder $formBuilder)
 	{
-        $form = $formBuilder->create('App\Forms\Galleries', [
-            'method' => 'POST',
-            'url' => route('gallery.store')
-        ]);
-
-        return view('gallery.create', compact('form'));
+        return $this->makeCreate('gallery', $formBuilder);
 	}
 
 	/**
@@ -63,18 +58,20 @@ class GalleryController extends Controller {
 	 */
 	public function show($id)
 	{
-        return $this->repository->show($id);
+        return redirect()->route('gallery.edit', $id);
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  $id Integer
+	 * @param  $formBuilder FormBuilder
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($id, FormBuilder $formBuilder)
 	{
-		//
+        $model = $this->repository->find($id);
+        return $this->makeEdit('gallery', $model, $formBuilder);
 	}
 
 	/**

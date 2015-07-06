@@ -18,8 +18,7 @@
                             <th>Titulo</th>
                             <th>Precio</th>
                             <th>Producto</th>
-                            <th class="text-center">Ver</th>
-                            <th class="text-center">Editar</th>
+                            <th class="text-center">Ver / Editar</th>
                             <th class="text-center">Eliminar</th>
                         </tr>
                     </thead>
@@ -30,17 +29,12 @@
                             <td>{{ $offer->title }}</td>
                             <td>$ {{ $offer->price }}</td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver producto asociado" href="{{ route('offers.show', $offer->product_id) }}">
+                                <a data-toggle="tooltip" title="Ver producto asociado" href="{{ route('products.show', $offer->product_id) }}">
                                     <i class="icon-shop"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver detalle de la oferta" href="{{ route('offers.show', $offer->id) }}">
-                                    <i class="icon-line2-magnifier-add"></i>
-                                </a>
-                            </td>
-                            <td class="text-center">
-                                <a data-toggle="tooltip" title="Editar oferta" href="{{ route('offers.edit', $offer->id) }}">
+                                <a data-toggle="tooltip" title="Ver/Editar oferta" href="{{ route('offers.edit', $offer->id) }}">
                                     <i class="icon-pencil2"></i>
                                 </a>
                             </td>

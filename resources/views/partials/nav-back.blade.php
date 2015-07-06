@@ -25,12 +25,6 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ route('image.index') }}"><div>Imagenes</div></a>
-                        <ul>
-                            <li><a href="{{ route('image.create') }}"><div>Cargar imagen</div></a></li>
-                        </ul>
-                    </li>
-                    <li>
                         <a href="{{ route('complex.index') }}"><div>Complejos</div></a>
                         <ul>
                             <li><a href="{{ route('complex.create') }}"><div>Crear complejo</div></a></li>
@@ -40,6 +34,12 @@
                         <a href="{{ route('gallery.index') }}"><div>Galerias</div></a>
                         <ul>
                             <li><a href="{{ route('gallery.create') }}"><div>Crear galeria</div></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ route('images.index') }}"><div>Imagenes</div></a>
+                        <ul>
+                            <li><a href="{{ route('images.create') }}"><div>Cargar imagen</div></a></li>
                         </ul>
                     </li>
                 </ul>

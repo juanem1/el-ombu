@@ -17,8 +17,7 @@
                             <th>#</th>
                             <th>Nombre</th>
                             <th>Galeria asociada</th>
-                            <th class="text-center">Ver</th>
-                            <th class="text-center">Editar</th>
+                            <th class="text-center">Ver / Editar</th>
                             <th class="text-center">Eliminar</th>
                         </tr>
                     </thead>
@@ -33,17 +32,12 @@
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver detalle de la imagen" href="{{ route('image.show', $image->id) }}">
-                                    <i class="icon-line2-magnifier-add"></i>
-                                </a>
-                            </td>
-                            <td class="text-center">
-                                <a data-toggle="tooltip" title="Editar imagen" href="{{ route('image.edit', $image->id) }}">
+                                <a data-toggle="tooltip" title="Ver/Editar imagen" href="{{ route('images.edit', $image->id) }}">
                                     <i class="icon-pencil2"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Eliminar imagen" href="{{ route('image.destroy', $image->id) }}">
+                                <a data-toggle="tooltip" title="Eliminar imagen" href="{{ route('images.destroy', $image->id) }}">
                                     <i class="icon-line2-close"></i>
                                 </a>
                             </td>

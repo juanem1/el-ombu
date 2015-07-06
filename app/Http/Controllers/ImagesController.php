@@ -39,12 +39,7 @@ class ImagesController extends Controller
 	 */
 	public function create(FormBuilder $formBuilder)
 	{
-        $form = $formBuilder->create('App\Forms\Images', [
-            'method' => 'POST',
-            'url' => route('image.store')
-        ]);
-
-        return view('images.create', compact('form'));
+        return $this->makeCreate('images', $formBuilder);
 	}
 
 	/**
@@ -65,19 +60,21 @@ class ImagesController extends Controller
 	 */
 	public function show($id)
 	{
-        return $this->repository->show($id);
+        return redirect()->route('image.edit', $id);
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  $id
+     * @param  $formBuilder
+     * @return Response
+     */
+    public function edit($id, FormBuilder $formBuilder)
+    {
+        $model = $this->repository->find($id);
+        return $this->makeEdit('images', $model, $formBuilder);
+    }
 
 	/**
 	 * Update the specified resource in storage.

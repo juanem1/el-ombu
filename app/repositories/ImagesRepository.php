@@ -21,7 +21,7 @@ class ImagesRepository
      * @param $id Integer
      * @return mixed
      */
-    public function show($id)
+    public function find($id)
     {
         return Images::find($id);
     }

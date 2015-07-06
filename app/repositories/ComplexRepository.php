@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Complex;
+use App\Images;
 
 class ComplexRepository
 {
@@ -21,9 +22,21 @@ class ComplexRepository
      * @param $id Integer
      * @return mixed
      */
-    public function show($id)
+    public function find($id)
     {
         return Complex::find($id);
+    }
+
+    /**
+     * Show complex list for the frontend
+     * @param $slug String
+     * @return Array
+     */
+    public function view($slug)
+    {
+        $params['complex'] = Complex::whereSlug($slug)->first();
+        $params['images'] = Images::where('gallery_id', $params['complex']->gallery_id)->get()->toArray();
+        return $params;
     }
 
 }

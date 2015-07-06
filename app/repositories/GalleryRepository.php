@@ -21,7 +21,7 @@ class GalleryRepository
      * @param $id Integer
      * @return mixed
      */
-    public function show($id)
+    public function find($id)
     {
         return Gallery::find($id);
     }

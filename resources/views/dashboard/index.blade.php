@@ -31,17 +31,6 @@
                 <div class="col_one_fifth nobottommargin">
                     <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
                         <div class="fbox-icon">
-                            <a href="{{ route('image.index') }}">
-                                <i class="noborder icon-photo"></i>
-                            </a>
-                        </div>
-                        <h3>Imagenes<span class="subtitle">Administrar imagenes</span></h3>
-                    </div>
-                </div>
-
-                <div class="col_one_fifth nobottommargin">
-                    <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
-                        <div class="fbox-icon">
                             <a href="{{ route('complex.index') }}">
                                 <i class="noborder icon-users"></i>
                             </a>
@@ -60,6 +49,18 @@
                         <h3>Galerias<span class="subtitle">Administrar galerias</span></h3>
                     </div>
                 </div>
+
+                <div class="col_one_fifth nobottommargin">
+                    <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                        <div class="fbox-icon">
+                            <a href="{{ route('images.index') }}">
+                                <i class="noborder icon-photo"></i>
+                            </a>
+                        </div>
+                        <h3>Imagenes<span class="subtitle">Administrar imagenes</span></h3>
+                    </div>
+                </div>
+
             </div>
 
         </div>

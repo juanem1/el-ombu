@@ -17,7 +17,7 @@ class OffersRepository
      * @param $slug
      * @return mixed
      */
-    public function find($slug) {
+    public function findSlug($slug) {
         return Offers::with('products')->whereSlug($slug)->first();
     }
 
@@ -34,7 +34,7 @@ class OffersRepository
      * @param $id Integer
      * @return mixed
      */
-    public function show($id)
+    public function find($id)
     {
         return Offers::find($id);
     }

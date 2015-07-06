@@ -12,14 +12,14 @@ Route::controllers([
 
 // Complejos
 Route::resource('complex', 'ComplexController');
-Route::get('complejos/{name}', ['as' => 'complejos.show', 'uses' => 'ComplexController@view']);
+Route::get('complejos/{name}', ['as' => 'complejos.show', 'uses' => 'StaticsController@viewComplex']);
 
 // Galerias
 Route::resource('gallery', 'GalleryController');
 Route::get('galeria/{name}', ['as' => 'galeria.view', 'uses' => 'StaticsController@viewGallery']);
 
 // Images
-Route::resource('image', 'ImagesController');
+Route::resource('images', 'ImagesController');
 
 // Ofertas
 Route::resource('offers', 'OffersController');

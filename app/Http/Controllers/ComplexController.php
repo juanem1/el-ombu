@@ -3,7 +3,7 @@
 use App\Complex;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Kris\LaravelFormBuilder\FormBuilder;
 use App\Images;
 use App\Repositories\ComplexRepository;
 use Illuminate\Http\Request;
@@ -30,15 +30,15 @@ class ComplexController extends Controller {
         return view('complex.index', compact('complexes'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
+    /**
+     * Show the form for creating a new resource.
+     * @param $formBuilder FormBuilder
+     * @return Response
+     */
+    public function create(FormBuilder $formBuilder)
+    {
+        return $this->makeCreate('complex', $formBuilder);
+    }
 
 	/**
 	 * Store a newly created resource in storage.
@@ -58,33 +58,23 @@ class ComplexController extends Controller {
 	 */
 	public function show($id)
 	{
-        return $this->repository->show($id);
+        return redirect()->route('complex.edit', $id);
 	}
+
+
 
     /**
-     * Display the specified from its slug
+     * Show the form for editing the specified resource.
      *
-     * @param  String $slug
+     * @param  $id
+     * @param  $formBuilder
      * @return Response
      */
-    public function view($slug)
+    public function edit($id, FormBuilder $formBuilder)
     {
-        $complex = Complex::whereSlug($slug)->first();
-        $images = Images::where('gallery_id', $complex->gallery_id)->get()->toArray();
-        //dd($images);
-        return view('complex.view', compact('complex', 'images'));
+        $model = $this->repository->find($id);
+        return $this->makeEdit('complex', $model, $formBuilder);
     }
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
 
 	/**
 	 * Update the specified resource in storage.
