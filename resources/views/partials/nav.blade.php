@@ -2,11 +2,11 @@
 <header id="header" class="sticky-style-2">
     <div class="container clearfix">
         <div id="logo" class="divcenter">
-            <a href="/" class="standard-logo" data-dark-logo="/images/logo.png">
-                <img class="divcenter" src="/images/logo.png" alt="El Ombu logo" height="100px" width="auto" />
+            <a href="/" class="standard-logo" data-dark-logo="/img/logo.png">
+                <img class="divcenter" src="/img/logo.png" alt="El Ombu logo" height="100px" width="auto" />
             </a>
             <a href="/" class="retina-logo" data-dark-logo="/images/logo.png">
-                <img class="divcenter" src="/images/logo.png" alt="El Ombu logo" />
+                <img class="divcenter" src="/img/logo.png" alt="El Ombu logo" />
             </a>
         </div>
     </div>

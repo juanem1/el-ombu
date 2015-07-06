@@ -10,6 +10,9 @@
     <section id="content">
         <div class="content-wrap">
             <div class="container clearfix">
+
+                @include('errors.list')
+
                 {!! form($form) !!}
             </div>
         </div>

@@ -11,6 +11,8 @@
         <div class="content-wrap">
             <div class="container clearfix">
 
+                @include('partials.successMessage')
+
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>

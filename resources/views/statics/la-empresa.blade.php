@@ -21,7 +21,7 @@
                 </div>
                 <div class="col_one_third col_last">
                     <div class="center">
-                        <img src="/images/tecnica/fondotecnica.jpg" alt="Fondo la empresa" />
+                        <img src="/img/tecnica/fondotecnica.jpg" alt="Fondo la empresa" />
                     </div>
                 </div>
 

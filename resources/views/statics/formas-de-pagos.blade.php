@@ -25,7 +25,7 @@
 
                 <div class="col_one_third col_last">
                     <div class="center">
-                        <img src="/images/formas-de-pago.jpg" alt="Formas de pago" />
+                        <img src="/img/formas-de-pago.jpg" alt="Formas de pago" />
                     </div>
                 </div>
 

@@ -82,7 +82,7 @@
             maptype: 'ROADMAP',
             zoom: 13,
             icon: {
-                image: "images/icons/map-icon-red.png",
+                image: "img/icons/map-icon-red.png",
                 iconsize: [32, 39],
                 iconanchor: [32,39]
             },

@@ -5,7 +5,7 @@
         <div class="container clearfix">
             <div class="col_half">
                 <div class="widget clearfix">
-                    <div class="clearfix" style="padding: 10px 0; background: url('/images/world-map.png') no-repeat center center;">
+                    <div class="clearfix" style="padding: 10px 0; background: url('/img/world-map.png') no-repeat center center;">
                         <div class="col_half">
                             <address class="nobottommargin">
                                 <abbr style="display: inline-block;margin-bottom: 7px;">
