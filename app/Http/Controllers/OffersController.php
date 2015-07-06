@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\Repositories\OffersRepository;
-use Illuminate\Http\Request;
 use Kris\LaravelFormBuilder\FormBuilder;
+use App\Http\Requests\UpdateOffersRequest;
 
 class OffersController extends Controller {
 
@@ -80,15 +79,17 @@ class OffersController extends Controller {
         return $this->makeEdit('offers', $model, $formBuilder);
     }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param $id
+     * @param UpdateOffersRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+	public function update($id, UpdateOffersRequest $request)
 	{
-		//
+        $this->repository->find($id)->update($request->all());
+        return redirect()->route('offers.index')->withSuccess(true);
 	}
 
 	/**
