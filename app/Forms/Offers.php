@@ -17,7 +17,7 @@ class Offers extends Form
             ->add('save', 'submit',
                 [
                     'wrapper' => ['class' => 'pull-right'],
-                    'attr' => ['class' => 'form-control field-input btn btn-primary'],
+                    'attr' => ['class' => 'button button-3d button-rounded button-green'],
                     'label' => 'Guardar'
                 ]);
     }
