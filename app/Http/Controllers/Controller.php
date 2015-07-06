@@ -39,7 +39,7 @@ abstract class Controller extends BaseController {
 
         $form = $formBuilder->create($formPath, [
             'method' => 'PATCH',
-            'url' => route("$name.update"),
+            'url' => route("$name.update", $model->id),
             'model' => $model
         ]);
 
