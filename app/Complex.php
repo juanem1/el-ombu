@@ -4,6 +4,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Complex extends Model {
 
-	//
+    protected $fillable = [
+        'title',
+        'description',
+        'price',
+        'gallery_id'
+    ];
 
 }
