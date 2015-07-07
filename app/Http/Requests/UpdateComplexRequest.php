@@ -23,10 +23,10 @@ class UpdateComplexRequest extends Request
 	public function rules()
 	{
 		return [
-            'title',
-            'description',
-            'price',
-            'gallery_id'
+            'title' => 'required',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'gallery_id' => 'required'
 		];
 	}
 

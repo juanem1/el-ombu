@@ -23,12 +23,12 @@ class UpdateProductsRequest extends Request
 	public function rules()
 	{
 		return [
-            'title',
-            'subTitle',
-            'shortDescription',
-            'longDescription',
-            'price',
-            'pdf'
+            'title' => 'required',
+            'subTitle' => 'required',
+            'shortDescription' => 'required',
+            'longDescription' => 'required',
+            'price' => 'required|numeric',
+            'pdf' => 'required'
 		];
 	}
 

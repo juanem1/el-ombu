@@ -24,7 +24,7 @@ class UpdateOffersRequest extends Request
 	{
 		return [
             'title'  => 'required',
-            'price'  => 'required',
+            'price'  => 'required|numeric',
             'product_id'  => 'required'
 		];
 	}

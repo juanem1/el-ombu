@@ -23,8 +23,8 @@ class UpdateImagesRequest extends Request
 	public function rules()
 	{
 		return [
-            'gallery_id',
-            'name'
+            'gallery_id' => 'required',
+            'name' => 'required'
 		];
 	}
 
