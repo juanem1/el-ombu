@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Kris\LaravelFormBuilder\FormBuilder;
 use App\Repositories\ComplexRepository;
 use App\Http\Requests\UpdateComplexRequest;
+use App\Http\Requests\CreateComplexRequest;
 
 class ComplexController extends Controller
 {
@@ -42,12 +43,13 @@ class ComplexController extends Controller
 
 	/**
 	 * Store a newly created resource in storage.
-	 *
+	 * @param $request
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateComplexRequest $request)
 	{
-		//
+        $this->repository->create($request->all());
+        return redirect()->route('complex.index')->withSuccess(true);
 	}
 
 	/**

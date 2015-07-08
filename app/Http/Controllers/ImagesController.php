@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Kris\LaravelFormBuilder\FormBuilder;
 use App\Repositories\ImagesRepository;
 use App\Http\Requests\UpdateImagesRequest;
+use App\Http\Requests\CreateImagesRequest;
 
 class ImagesController extends Controller
 {
@@ -43,12 +44,13 @@ class ImagesController extends Controller
 
 	/**
 	 * Store a newly created resource in storage.
-	 *
+	 * @param $request
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateImagesRequest $request)
 	{
-		//
+        $this->repository->create($request->all());
+        return redirect()->route('images.index')->withSuccess(true);
 	}
 
 	/**

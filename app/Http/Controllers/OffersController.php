@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Repositories\OffersRepository;
 use Kris\LaravelFormBuilder\FormBuilder;
 use App\Http\Requests\UpdateOffersRequest;
+use App\Http\Requests\CreateOffersRequest;
 
 class OffersController extends Controller {
 
@@ -25,7 +26,6 @@ class OffersController extends Controller {
 	public function index()
 	{
         $offers = $this->repository->all();
-
 		return view('offers.index', compact('offers'));
 	}
 
@@ -37,22 +37,18 @@ class OffersController extends Controller {
      */
     public function create(FormBuilder $formBuilder)
     {
-        $form = $formBuilder->create('App\Forms\Offers', [
-            'method' => 'POST',
-            'url' => route('offers.store'),
-        ]);
-
-        return view('offers.create', compact('form'));
+        return $this->makeCreate('offers', $formBuilder);
     }
 
 	/**
 	 * Store a newly created resource in storage.
-	 *
+	 * @param $request
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateOffersRequest $request)
 	{
-		//
+        $this->repository->create($request->all());
+        return redirect()->route('offers.index')->withSuccess(true);
 	}
 
 	/**

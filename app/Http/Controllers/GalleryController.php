@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Repositories\GalleryRepository;
 use Kris\LaravelFormBuilder\FormBuilder;
 use App\Http\Requests\UpdateGalleryRequest;
+use App\Http\Requests\CreateGalleryRequest;
 
 class GalleryController extends Controller
 {
@@ -42,12 +43,13 @@ class GalleryController extends Controller
 
 	/**
 	 * Store a newly created resource in storage.
-	 *
+	 * @param $request
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateGalleryRequest $request)
 	{
-		//
+        $this->repository->create($request->all());
+        return redirect()->route('gallery.index')->withSuccess(true);
 	}
 
 	/**

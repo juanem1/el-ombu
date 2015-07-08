@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Repositories\ProductsRepository;
 use Kris\LaravelFormBuilder\FormBuilder;
 use App\Http\Requests\UpdateProductsRequest;
+use App\Http\Requests\CreateProductsRequest;
 
 class ProductsController extends Controller
 {
@@ -49,11 +50,13 @@ class ProductsController extends Controller
 	/**
 	 * Store a newly created resource in storage.
 	 *
+     * @param $request
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateProductsRequest $request)
 	{
-		//
+		$this->repository->create($request->all());
+        return redirect()->route('products.index')->withSuccess(true);
 	}
 
 	/**
