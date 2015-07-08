@@ -26,4 +26,14 @@ class ImagesRepository
         return Images::find($id);
     }
 
+    /**
+     * Persist a new image in the DB
+     * @param $data Array
+     * @return Boolean
+     */
+    public function create($data)
+    {
+        return Images::create($data);
+    }
+
 }

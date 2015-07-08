@@ -26,4 +26,14 @@ class ProductsRepository
         return Products::all();
     }
 
+    /**
+     * Persist a new product in the DB
+     * @param $data Array
+     * @return Boolean
+     */
+    public function create($data)
+    {
+        return Products::create($data);
+    }
+
 }

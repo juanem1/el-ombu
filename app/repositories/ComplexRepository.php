@@ -39,4 +39,14 @@ class ComplexRepository
         return $params;
     }
 
+    /**
+     * Persist a new complex in the DB
+     * @param $data Array
+     * @return Boolean
+     */
+    public function create($data)
+    {
+        return Complex::create($data);
+    }
+
 }

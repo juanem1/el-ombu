@@ -39,4 +39,14 @@ class OffersRepository
         return Offers::find($id);
     }
 
+    /**
+     * Persist a new object in the DB
+     * @param $data Array
+     * @return mixed
+     */
+    public function create($data)
+    {
+        return Offers::create($data);
+    }
+
 }

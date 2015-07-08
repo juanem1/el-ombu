@@ -26,4 +26,14 @@ class GalleryRepository
         return Gallery::find($id);
     }
 
+    /**
+     * Persist a new Gallery in the DB
+     * @param $data Array
+     * @return Boolean
+     */
+    public function create($data)
+    {
+        return Gallery::create($data);
+    }
+
 }
