@@ -28897,6 +28897,13 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 .alert > ul {
   padding-left: 20px;
 }
+#header.sticky-style-2 {
+  height: 145px;
+}
+#header.sticky-style-2 #header-wrap {
+  background-color: #5fa344;
+  height: 45px;
+}
 #header.full-header #logo {
   margin-right: 0;
 }
@@ -28907,7 +28914,24 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
   height: auto !important;
 }
 #primary-menu.style-2 {
+  height: 45px;
   text-align: center;
+}
+#primary-menu.style-2 ul ul {
+  top: 43px;
+}
+#primary-menu.style-2 > div > ul {
+  height: 39px;
+}
+#primary-menu.style-2 > div > ul > li > a {
+  height: 44px;
+  line-height: 47px;
+}
+#primary-menu.style-2 > div > ul > li:hover a {
+  color: #555555;
+}
+#primary-menu ul li a {
+  color: #ffffff;
 }
 @media (min-width: 992px) {
   #primary-menu.style-2 > div > ul {
