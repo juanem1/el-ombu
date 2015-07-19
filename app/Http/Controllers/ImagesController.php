@@ -7,6 +7,7 @@ use Kris\LaravelFormBuilder\FormBuilder;
 use App\Repositories\ImagesRepository;
 use App\Http\Requests\UpdateImagesRequest;
 use App\Http\Requests\CreateImagesRequest;
+use App\Uploader\Uploader;
 
 class ImagesController extends Controller
 {
@@ -45,11 +46,16 @@ class ImagesController extends Controller
 	/**
 	 * Store a newly created resource in storage.
 	 * @param $request
+	 * @param $uploader
 	 * @return Response
 	 */
-	public function store(CreateImagesRequest $request)
+	public function store(CreateImagesRequest $request, Uploader $uploader)
 	{
-        $this->repository->create($request->all());
+        $params = $request->all();
+        if ($request->hasFile('name')) {
+            $params['name'] = $uploader->upload($request->file());
+        }
+        $this->repository->create($params);
         return redirect()->route('images.index')->withSuccess(true);
 	}
 
@@ -82,11 +88,16 @@ class ImagesController extends Controller
 	 *
 	 * @param  $id
 	 * @param  $request
+	 * @param  $uploader
 	 * @return Response
 	 */
-	public function update($id, UpdateImagesRequest $request)
+	public function update($id, UpdateImagesRequest $request, Uploader $uploader)
 	{
-        $this->repository->find($id)->update($request->all());
+        $params = $request->all();
+        if ($request->hasFile('name')) {
+            $params['name'] = $uploader->upload($request->file());
+        }
+        $this->repository->find($id)->update($params);
         return redirect()->route('images.index')->withSuccess(true);
 	}
 

@@ -19,10 +19,10 @@
                                 <article class="portfolio-item pf-media pf-icons">
                                     <div class="portfolio-image">
                                         <a href="#">
-                                            <img src="{{ $image->first()->name }}" alt="Gallery">
+                                            <img src="/img/images/{{ $image->name }}" alt="Gallery">
                                         </a>
                                         <div class="portfolio-overlay">
-                                            <a href="{{ $image->name }}" class="center-icon" data-lightbox="gallery-item">
+                                            <a href="/img/images/{{ $image->name }}" class="center-icon" data-lightbox="gallery-item">
                                                 <i class="icon-line-plus"></i>
                                             </a>
                                         </div>

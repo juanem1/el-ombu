@@ -6,7 +6,7 @@
                 <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
                 <ul>
-                    <li class="current">
+                    <li>
                         <a href="/"><div>Home</div></a>
                     </li>
                     <li>
