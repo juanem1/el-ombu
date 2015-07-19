@@ -1,4 +1,4 @@
-<header id="header" class="sticky-header">
+<header id="header" class="sticky-style-2 dashboard">
     <div id="header-wrap">
         <nav id="primary-menu" class="style-2">
             <div class="container clearfix">

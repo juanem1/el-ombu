@@ -28904,6 +28904,9 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
   background-color: #5fa344;
   height: 45px;
 }
+#header.dashboard {
+  height: 45px;
+}
 #header.full-header #logo {
   margin-right: 0;
 }
