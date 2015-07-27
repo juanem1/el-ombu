@@ -10,6 +10,9 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+// Dashboard
+Route::get('dashboard', ['as' => 'dashboard.index', 'uses' => 'DashboardController@index']);
+
 // Complejos
 Route::resource('complex', 'ComplexController');
 Route::get('complejos/{name}', ['as' => 'complejos.show', 'uses' => 'StaticsController@viewComplex']);
@@ -32,9 +35,6 @@ Route::resource('products', 'ProductsController');
 // Contacto
 Route::get('contacto', ['as' => 'contact.index', 'uses' => 'ContactController@index']);
 Route::post('contacto', ['as' => 'contact.store', 'uses' => 'ContactController@store']);
-
-// Dashboard
-Route::get('dashboard', ['as' => 'dashboard.index', 'uses' => 'DashboardController@index']);
 
 // -------------
 // STATICS

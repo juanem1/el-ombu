@@ -67,7 +67,7 @@ class ImagesController extends Controller
 	 */
 	public function show($id)
 	{
-        return redirect()->route('image.edit', $id);
+        return redirect()->route('images.edit', $id);
 	}
 
     /**
