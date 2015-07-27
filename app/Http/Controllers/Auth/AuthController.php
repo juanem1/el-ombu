@@ -20,6 +20,9 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+    // Redirect after login
+    protected $redirectPath = '/dashboard';
+
 	/**
 	 * Create a new authentication controller instance.
 	 *
