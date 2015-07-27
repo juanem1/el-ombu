@@ -40,6 +40,16 @@ class OffersRepository
     }
 
     /**
+     * Show one offer by its slug
+     * @param $slug String
+     * @return Array
+     */
+    public function view($slug)
+    {
+        return Offers::whereSlug($slug)->first();
+    }
+
+    /**
      * Persist a new object in the DB
      * @param $data Array
      * @return mixed

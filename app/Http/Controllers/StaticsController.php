@@ -64,21 +64,22 @@ class StaticsController extends Controller {
     }
 
     /**
-     * Show one offer by its ID
-     * @param $repo
-     * @param $id Integer
+     * Show one offer by its slug
+     * @param $slug String
+     * @param $repo OffersRepository
      * @return View
      */
-    public function viewOffer(OffersRepository $repo, $id)
+    public function viewOffer($slug, OffersRepository $repo)
     {
-        $offer = $repo->find($id);
+        $offer = $repo->view($slug);
         return view('offers.view', compact('offer'));
     }
 
     /**
      * Display the specified complex by its slug
      *
-     * @param  String $slug
+     * @param  $slug String
+     * @param  $repo ComplexRepository
      * @return Response
      */
     public function viewComplex($slug, ComplexRepository $repo)

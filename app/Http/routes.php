@@ -27,7 +27,7 @@ Route::resource('images', 'ImagesController');
 // Ofertas
 Route::resource('offers', 'OffersController');
 Route::get('ofertas', ['as' => 'ofertas', 'uses' => 'StaticsController@showAllOffers']);
-Route::get('oferta/{id}', ['as' => 'oferta.show', 'uses' => 'StaticsController@viewOffer']);
+Route::get('oferta/{slug}', ['as' => 'oferta.show', 'uses' => 'StaticsController@viewOffer']);
 
 // Productos
 Route::resource('products', 'ProductsController');
