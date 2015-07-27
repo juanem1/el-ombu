@@ -27,7 +27,7 @@
                             <!-- Entry Image ============================================= -->
                             @if (count($images) > 0)
                             <div class="entry-image">
-                                <img src="{{$images[0]['name']}}" alt="Blog Single">
+                                <img src="/img/images/{{$images[0]['name']}}" alt="Blog Single">
                             </div>
                             @endif
                             <!-- .entry-image end -->
@@ -47,8 +47,8 @@
                 <div class="sidebar nobottommargin col_last clearfix">
                     <div class="masonry-thumbs col-2 bottommargin-sm" data-big="3" data-lightbox="gallery">
                         @foreach($images as $image)
-                            <a href="{{$image['name']}}" data-lightbox="gallery-item">
-                                <img class="image_fade" src="{{$image['name']}}" alt="Gallery Thumb 1" />
+                            <a href="/img/images/{{$image['name']}}" data-lightbox="gallery-item">
+                                <img class="image_fade" src="/img/images/{{$image['name']}}" alt="Gallery" />
                             </a>
                         @endforeach
                     </div>

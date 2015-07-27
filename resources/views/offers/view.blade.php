@@ -26,8 +26,8 @@
                 <div class="col_one_third col_last">
                     <div class="masonry-thumbs col-2 bottommargin-sm clearfix" data-big="3" data-lightbox="gallery">
                         @foreach($offer->products->images as $image)
-                            <a href="{{ $image->name }}" data-lightbox="gallery-item">
-                                <img class="image_fade" src="{{ $image->name }}" alt="Gallery Thumb 1" />
+                            <a href="/img/images/{{ $image->name }}" data-lightbox="gallery-item">
+                                <img class="image_fade" src="/img/images/{{ $image->name }}" alt="Gallery Thumb 1" />
                             </a>
                         @endforeach
                     </div>
