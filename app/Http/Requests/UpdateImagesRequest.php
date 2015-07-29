@@ -24,7 +24,7 @@ class UpdateImagesRequest extends Request
 	{
 		return [
             'gallery_id' => 'required',
-            'name' => 'required'
+            'name' => 'image'
 		];
 	}
 
