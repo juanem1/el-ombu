@@ -88,7 +88,7 @@ class ComplexController extends Controller
 	public function update($id, UpdateComplexRequest $request)
 	{
         $this->repository->find($id)->update($request->all());
-        return redirect()->route('complex.index')->withSuccess(true);
+        return redirect()->route('complex.index')->withSuccess('El complejo se actualizo correctamente.');
 	}
 
 	/**
@@ -99,7 +99,8 @@ class ComplexController extends Controller
 	 */
 	public function destroy($id)
 	{
-		//
+        $this->repository->find($id)->delete();
+        return redirect()->route('complex.index')->withSuccess('El complejo se elimino correctamente.');
 	}
 
 }

@@ -86,7 +86,7 @@ class GalleryController extends Controller
 	public function update($id, UpdateGalleryRequest $request)
 	{
         $this->repository->find($id)->update($request->all());
-        return redirect()->route('gallery.index')->withSuccess(true);
+        return redirect()->route('gallery.index')->withSuccess('La galeria se actualizo correctamente.');
 	}
 
 	/**
@@ -97,7 +97,8 @@ class GalleryController extends Controller
 	 */
 	public function destroy($id)
 	{
-		//
+        $this->repository->find($id)->delete();
+        return redirect()->route('gallery.index')->withSuccess('La galeria se elimino correctamente.');
 	}
 
 }

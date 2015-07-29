@@ -85,7 +85,7 @@ class OffersController extends Controller {
 	public function update($id, UpdateOffersRequest $request)
 	{
         $this->repository->find($id)->update($request->all());
-        return redirect()->route('offers.index')->withSuccess(true);
+        return redirect()->route('offers.index')->withSuccess('La oferta se actualizo correctamente.');
 	}
 
 	/**
@@ -96,7 +96,8 @@ class OffersController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+        $this->repository->find($id)->delete();
+        return redirect()->route('offers.index')->withSuccess('La oferta se elimino correctamente.');
 	}
 
 }

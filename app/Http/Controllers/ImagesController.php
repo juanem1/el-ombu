@@ -98,7 +98,7 @@ class ImagesController extends Controller
             $params['name'] = $uploader->upload($request->file());
         }
         $this->repository->find($id)->update($params);
-        return redirect()->route('images.index')->withSuccess(true);
+        return redirect()->route('images.index')->withSuccess('La imagen se actualizo correctamente.');
 	}
 
 	/**
@@ -109,7 +109,8 @@ class ImagesController extends Controller
 	 */
 	public function destroy($id)
 	{
-		//
+        $this->repository->find($id)->delete();
+        return redirect()->route('images.index')->withSuccess('La imagen se elimino correctamente.');
 	}
 
 }

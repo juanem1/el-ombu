@@ -93,18 +93,19 @@ class ProductsController extends Controller
 	public function update($id, UpdateProductsRequest $request)
 	{
         $this->repository->find($id)->update($request->all());
-        return redirect()->route('products.index')->withSuccess(true);
+        return redirect()->route('products.index')->withSuccess('El producto se actualizo correctamente.');
 	}
 
 	/**
 	 * Remove the specified resource from storage.
 	 *
-	 * @param  int  $id
+	 * @param  $id
 	 * @return Response
 	 */
 	public function destroy($id)
 	{
-		//
+        $this->repository->find($id)->delete();
+        return redirect()->route('products.index')->withSuccess('El producto se elimino correctamente.');
 	}
 
 }
