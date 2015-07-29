@@ -28893,6 +28893,12 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
     display: inline-block;
   }
 }
+table form {
+  margin: 0;
+}
+.table-bordered > tbody > tr > td {
+  vertical-align: middle;
+}
 .alert > p,
 .alert > ul {
   padding-left: 20px;
