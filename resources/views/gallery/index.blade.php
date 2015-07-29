@@ -11,6 +11,8 @@
         <div class="content-wrap">
             <div class="container clearfix">
 
+                @include('partials.messages')
+
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
@@ -26,14 +28,17 @@
                             <td>{{ $gallery->id }}</td>
                             <td>{{ $gallery->title }}</td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver/Editar galeria" href="{{ route('gallery.edit', $gallery->id) }}">
+                                <a class="button button-3d button-mini button-rounded button-dirtygreen" data-toggle="tooltip" title="Ver/Editar galeria" href="{{ route('gallery.edit', $gallery->id) }}">
                                     <i class="icon-pencil2"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Eliminar galeria" href="{{ route('gallery.destroy', $gallery->id) }}">
+                                {!! Form::open(['route' => ['gallery.destroy', $gallery->id], 'method' => 'DELETE']) !!}
+                                <button class="button button-3d button-mini button-rounded button-red" type="submit" data-toggle="tooltip" title="Eliminar galeria">
                                     <i class="icon-line2-close"></i>
-                                </a>
+                                    Eliminar
+                                </button>
+                                {!! Form::close() !!}
                             </td>
                         </tr>
                         @endforeach

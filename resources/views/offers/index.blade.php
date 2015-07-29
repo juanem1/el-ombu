@@ -11,7 +11,7 @@
         <div class="content-wrap">
             <div class="container clearfix">
 
-                @include('partials.successMessage')
+                @include('partials.messages')
 
                 <table class="table table-bordered table-hover">
                     <thead>
@@ -31,19 +31,22 @@
                             <td>{{ $offer->title }}</td>
                             <td>$ {{ $offer->price }}</td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver producto asociado" href="{{ route('products.show', $offer->product_id) }}">
+                                <a class="button button-3d button-mini button-rounded button-amber" data-toggle="tooltip" title="Ver producto asociado" href="{{ route('products.show', $offer->product_id) }}">
                                     <i class="icon-shop"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Ver/Editar oferta" href="{{ route('offers.edit', $offer->id) }}">
+                                <a class="button button-3d button-mini button-rounded button-dirtygreen" data-toggle="tooltip" title="Ver/Editar oferta" href="{{ route('offers.edit', $offer->id) }}">
                                     <i class="icon-pencil2"></i>
                                 </a>
                             </td>
                             <td class="text-center">
-                                <a data-toggle="tooltip" title="Eliminar oferta" href="{{ route('offers.destroy', $offer->id) }}">
+                                {!! Form::open(['route' => ['offers.destroy', $offer->id], 'method' => 'DELETE']) !!}
+                                <button class="button button-3d button-mini button-rounded button-red" type="submit" data-toggle="tooltip" title="Eliminar oferta">
                                     <i class="icon-line2-close"></i>
-                                </a>
+                                    Eliminar
+                                </button>
+                                {!! Form::close() !!}
                             </td>
                         </tr>
                         @endforeach
