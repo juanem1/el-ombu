@@ -3,7 +3,7 @@
 @section('content')
     <section id="page-title">
         <div class="container clearfix">
-            <h1>Complejo {{$complex->title}}</h1>
+            <h1>{{$complex->title}}</h1>
             {{--<span>La fabricación de nuestras Viviendas Americanas se realiza según las siguientes características técnicas.</span>--}}
         </div>
     </section>
