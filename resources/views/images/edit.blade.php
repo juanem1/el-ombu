@@ -10,7 +10,15 @@
     <section id="content">
         <div class="content-wrap">
             <div class="container clearfix">
+                <div>
+                    <label for="">Imagen Actual</label>
+                    <img width="100%" height="auto" src="/img/images/{{ $model->name }}" alt="" />
+                </div>
+
+                <hr/>
+
                 {!! form($form) !!}
+
             </div>
         </div>
     </section>

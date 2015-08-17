@@ -43,7 +43,7 @@ abstract class Controller extends BaseController {
             'model' => $model
         ]);
 
-        return view("$name.edit", compact('form'));
+        return view("$name.edit", compact('form', 'model'));
     }
 
 }
