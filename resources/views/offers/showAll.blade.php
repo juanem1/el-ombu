@@ -19,16 +19,18 @@
                                         <!-- Portfolio Image -->
                                         <div class="portfolio-image">
                                             <a href="#">
-                                                @if($offer->products->images->first())
-                                                    <img src="/img/images/{{ $offer->products->images->first()->name }}" alt="Portfolio Title">
+                                                @if($offer->products)
+                                                    <img src="/img/images/{{ $offer->products->images->first()->name }}" alt="Portfolio Title" />
                                                 @endif
                                             </a>
-                                            <div class="portfolio-overlay" data-lightbox="gallery">
-                                                @foreach($offer->products->images as $image)
-                                                <a href="/img/images/{{ $image->name }}" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-                                                @endforeach
-                                                <a href="{{ route('oferta.show', $offer->slug) }}" class="right-icon"><i class="icon-line-plus"></i></a>
-                                            </div>
+                                            @if($offer->products)
+                                                <div class="portfolio-overlay" data-lightbox="gallery">
+                                                    @foreach($offer->products->images as $image)
+                                                        <a href="/img/images/{{ $image->name }}" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+                                                    @endforeach
+                                                    <a href="{{ route('oferta.show', $offer->slug) }}" class="right-icon"><i class="icon-line-plus"></i></a>
+                                                </div>
+                                            @endif
                                         </div>
                                         <!-- Portfolio Description -->
                                         <div class="portfolio-desc">

@@ -20,7 +20,9 @@
                                 <div class="ipost clearfix">
                                     <div class="entry-image">
                                         <a href="{{ route('oferta.show', $offer->slug) }}">
-                                            <img class="image_fade" src="#" alt="Ofertas">
+                                            @if ($offer->products->images->first()->name)
+                                            <img class="image_fade" src="/img/images/{{$offer->products->images->first()->name}}" alt="Ofertas" />
+                                            @endif
                                         </a>
                                     </div>
                                     <div class="entry-title">
