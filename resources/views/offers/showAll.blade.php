@@ -19,11 +19,11 @@
                                         <!-- Portfolio Image -->
                                         <div class="portfolio-image">
                                             <a href="#">
-                                                @if($offer->products)
+                                                @if(count($offer->products->images) > 0)
                                                     <img src="/img/images/{{ $offer->products->images->first()->name }}" alt="Portfolio Title" />
                                                 @endif
                                             </a>
-                                            @if($offer->products)
+                                            @if(count($offer->products->images) > 0)
                                                 <div class="portfolio-overlay" data-lightbox="gallery">
                                                     @foreach($offer->products->images as $image)
                                                         <a href="/img/images/{{ $image->name }}" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
