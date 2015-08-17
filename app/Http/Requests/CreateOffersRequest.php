@@ -1,8 +1,7 @@
 <?php namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
-
-class CreateOffersRequest extends Request {
+class CreateOffersRequest extends Request
+{
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -11,7 +10,7 @@ class CreateOffersRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return false;
+		return true;
 	}
 
 	/**
@@ -22,7 +21,8 @@ class CreateOffersRequest extends Request {
 	public function rules()
 	{
 		return [
-			//
+			'title' => 'required',
+            'price' => 'required'
 		];
 	}
 
