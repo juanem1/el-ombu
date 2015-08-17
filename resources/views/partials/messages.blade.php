@@ -1,16 +1,15 @@
 @if (Session::has('errors'))
     <div class="style-msg errormsg">
         <div class="sb-msg">
-            <i class="icon-remove"></i>
+            <i class="icon-frown"></i>
             <ul class="list-unstyled">
-                {{ implode('', $errors->all('<li class="error">:message</li>')) }}
+                {!! implode('', $errors->all('<li class="error">:message</li>')) !!}
             </ul>
         </div>
     </div>
 @endif
 
 @if (Session::has('message'))
-
     <div class="style-msg infomsg">
         <div class="sb-msg">
             <i class="icon-info-sign"></i>

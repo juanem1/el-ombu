@@ -28903,6 +28903,10 @@ table form {
 .alert > ul {
   padding-left: 20px;
 }
+.errormsg ul {
+  margin: 0;
+  display: inline-block;
+}
 #header.sticky-style-2 {
   height: 145px;
 }

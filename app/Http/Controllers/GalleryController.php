@@ -97,8 +97,12 @@ class GalleryController extends Controller
 	 */
 	public function destroy($id)
 	{
-        $this->repository->find($id)->delete();
-        return redirect()->route('gallery.index')->withSuccess('La galeria se elimino correctamente.');
+        if ($id <= 12) {
+            return redirect()->route('gallery.index')->withErrors('No puedes eliminar esta galeria ya que es parte de la aplicación principal.');
+        } else {
+            $this->repository->find($id)->delete();
+            return redirect()->route('gallery.index')->withSuccess('La galeria se elimino correctamente.');
+        }
 	}
 
 }
