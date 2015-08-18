@@ -3,7 +3,7 @@
 @section('content')
     <section id="page-title">
         <div class="container clearfix">
-            <h1>Productos</h1>
+            <h1>Productos y Precios</h1>
         </div>
     </section>
 
