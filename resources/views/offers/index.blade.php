@@ -19,7 +19,7 @@
                             <th>#</th>
                             <th>Titulo</th>
                             <th>Precio</th>
-                            <th>Producto</th>
+                            <th class="text-center">Producto</th>
                             <th class="text-center">Ver / Editar</th>
                             <th class="text-center">Eliminar</th>
                         </tr>
@@ -31,7 +31,7 @@
                             <td>{{ $offer->title }}</td>
                             <td>$ {{ $offer->price }}</td>
                             <td class="text-center">
-                                <a class="button button-3d button-mini button-rounded button-amber" data-toggle="tooltip" title="Ver producto asociado" href="{{ route('products.show', $offer->product_id) }}">
+                                <a class="button button-3d button-mini button-rounded button-amber" data-toggle="tooltip" title="Producto asociado: {{$offer->products->title}}" href="{{ route('products.edit', $offer->product_id) }}">
                                     <i class="icon-shop"></i>
                                 </a>
                             </td>

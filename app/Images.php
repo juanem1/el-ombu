@@ -9,4 +9,12 @@ class Images extends Model {
         'name'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function gallery()
+    {
+        return $this->hasOne('App\Gallery', 'id', 'gallery_id');
+    }
+
 }

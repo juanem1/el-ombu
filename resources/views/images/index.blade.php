@@ -18,7 +18,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nombre</th>
-                            <th>Galeria asociada</th>
+                            <th class="text-center">Galeria asociada</th>
                             <th class="text-center">Ver / Editar</th>
                             <th class="text-center">Eliminar</th>
                         </tr>
@@ -29,7 +29,7 @@
                             <td>{{ $image->id }}</td>
                             <td>{{ $image->name }}</td>
                             <td class="text-center">
-                                <a class="button button-3d button-mini button-rounded button-amber" data-toggle="tooltip" title="Ver galeria asociada" href="{{ route('gallery.show', $image->gallery_id) }}">
+                                <a class="button button-3d button-mini button-rounded button-amber" data-toggle="tooltip" title="Galeria asociada: {{$image->gallery->title}}" href="{{ route('gallery.edit', $image->gallery_id) }}">
                                     <i class="icon-line-stack-2"></i>
                                 </a>
                             </td>

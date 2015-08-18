@@ -19,7 +19,6 @@
                             <th>#</th>
                             <th>Nombre</th>
                             <th>Precio</th>
-                            <th>Galeria asociada</th>
                             <th class="text-center">Ver / Editar</th>
                             <th class="text-center">Eliminar</th>
                         </tr>
@@ -30,11 +29,6 @@
                             <td>{{ $complex->id }}</td>
                             <td>{{ $complex->title }}</td>
                             <td>$ {{ $complex->price }}</td>
-                            <td class="text-center">
-                                <a class="button button-3d button-mini button-rounded button-amber" data-toggle="tooltip" title="Ver galeria asociada" href="{{ route('gallery.show', $complex->gallery_id) }}">
-                                    <i class="icon-line-stack-2"></i>
-                                </a>
-                            </td>
                             <td class="text-center">
                                 <a class="button button-3d button-mini button-rounded button-dirtygreen" data-toggle="tooltip" title="Ver/Editar complejo" href="{{ route('complex.edit', $complex->id) }}">
                                     <i class="icon-pencil2"></i>
