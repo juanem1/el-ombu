@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Gallery;
 use App\Repositories\ComplexRepository;
+use App\Repositories\ProductsRepository;
 use Illuminate\Http\Request;
 use App\Repositories\OffersRepository;
 
@@ -50,6 +51,17 @@ class StaticsController extends Controller {
     {
         $gallery = Gallery::whereSlug($slug)->first();
         return view('gallery.view', compact('gallery'));
+    }
+
+    /**
+     * Show all products
+     * @param $repo
+     * @return View
+     */
+    public function showAllProducts(ProductsRepository $repo)
+    {
+        $products = $repo->all();
+        return view('products.showAll', compact('products'));
     }
 
     /**

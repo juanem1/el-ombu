@@ -25,7 +25,7 @@
                         <a href="{{ route('ofertas') }}"><div>Ofertas</div></a>
                     </li>
                     <li>
-                        <a href="#"><div>Productos y precios</div></a>
+                        <a href="{{ route('products.show') }}"><div>Productos y precios</div></a>
                     </li>
                     <li>
                         <a href="{{ route('galeria.view', 'casas') }}"><div>Galerias</div></a>

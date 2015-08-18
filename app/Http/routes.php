@@ -31,6 +31,7 @@ Route::get('oferta/{slug}', ['as' => 'oferta.show', 'uses' => 'StaticsController
 
 // Productos
 Route::resource('products', 'ProductsController');
+Route::get('productos-y-precios', ['as' => 'products.show', 'uses' => 'StaticsController@showAllProducts']);
 
 // Contacto
 Route::get('contacto', ['as' => 'contact.index', 'uses' => 'ContactController@index']);
