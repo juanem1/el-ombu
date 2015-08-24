@@ -14,7 +14,16 @@ table form {
   margin: 0;
   display: inline-block;
 }
-
+.price-highlight {
+  background: #edce5c; /* Old browsers */
+  background: -moz-linear-gradient(left, #edce5c 0%, #e3a440 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#edce5c), color-stop(100%,#e3a440)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #edce5c 0%,#e3a440 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #edce5c 0%,#e3a440 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #edce5c 0%,#e3a440 100%); /* IE10+ */
+  background: linear-gradient(to right, #edce5c 0%,#e3a440 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edce5c', endColorstr='#e3a440',GradientType=1 ); /* IE6-9 */
+}
 #header.sticky-style-2 {
   height: 145px;
   #header-wrap {
