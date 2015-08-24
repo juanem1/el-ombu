@@ -63,8 +63,16 @@
                             <strong>Sucursal Lomas de San Martín:</strong>
                         </abbr><br>
                         Monseñor Pablo Cabrera 2626<br>
-                        B° <br>
                         Teléfonos: 0351-4880421 / 4807352
+                    </address>
+
+                    <address>
+                        <abbr style="display: inline-block;margin-bottom: 7px;">
+                            <strong>Sucursal Villa Gran Parque:</strong>
+                        </abbr><br>
+                        Juan B. Justo 7946<br>
+                        B° Villa Gran Parque<br>
+                        Teléfono: 0351-4995384
                     </address>
                 </div>
                 <!-- .sidebar end -->
