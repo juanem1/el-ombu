@@ -9,6 +9,55 @@
         <div class="content-wrap">
             <div class="container clearfix">
 
+                <div class="row bottommargin">
+                    <h3 class="text-center">Elegí el estilo de tu inversión según tus gustos y haz tus costos</h3>
+                    <div class="row seven-cols">
+                        <div class="col-md-1 text-center">
+                            <a href="#">
+                                <img src="/img/houses_styles/clasico.png" alt="Estilo clasico" />
+                                clasico
+                            </a>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <a href="#">
+                                <img src="/img/houses_styles/novapremium.png" alt="Estilo Nova Premium" />
+                                Nova premium
+                            </a>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <a href="#">
+                                <img src="/img/houses_styles/rustico.png" alt="Estilo Rustico" />
+                                Rustico
+                            </a>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <a href="#">
+                                <img src="/img/houses_styles/alpina.png" alt="Estilo Alpina" />
+                                Alpina
+                            </a>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <a href="#">
+                                <img src="/img/houses_styles/tradicional.png" alt="Estilo Tradicional" />
+                                Tradicional
+                            </a>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <a href="#">
+                                <img src="/img/houses_styles/minimalista.png" alt="Estilo Minimalista" />
+                                Minimalista
+                            </a>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <a href="#">
+                                <img src="/img/houses_styles/comercial.png" alt="Estilo Comercial" />
+                                Comercial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="fancy-title title-border-color title-center">
                     <h2>Ofertas Destacadas</h2>
                 </div>
@@ -42,40 +91,36 @@
                     </div>
                 @endforeach
 
-                <div class="divider divider-rounded divider-center">
-                    <i class="icon-home2"></i>
-                </div>
-
                 <!-- 3 colum content -->
                 <div class="container clearfix">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="feature-box fbox-center fbox-effect">
-                            <div class="fbox-icon">
-                                <a href="{{ route('formasDePago') }}"><i class="icon-credit i-alt"></i></a>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="feature-box fbox-center fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="{{ route('formasDePago') }}"><i class="icon-credit i-alt"></i></a>
+                                </div>
+                                <h3>Formas de pago</h3>
                             </div>
-                            <h3>Formas de pago</h3>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box fbox-center fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="{{ route('fichaTecnica') }}"><i class="icon-measure i-alt"></i></a>
+                                </div>
+                                <h3>Caracteristicas técnicas</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box fbox-center fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="{{ route('vivienda') }}"><i class="icon-wrench i-alt"></i></a>
+                                </div>
+                                <h3>Construir en nueve pasos</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="feature-box fbox-center fbox-effect">
-                            <div class="fbox-icon">
-                                <a href="{{ route('fichaTecnica') }}"><i class="icon-measure i-alt"></i></a>
-                            </div>
-                            <h3>Caracteristicas técnicas</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="feature-box fbox-center fbox-effect">
-                            <div class="fbox-icon">
-                                <a href="{{ route('vivienda') }}"><i class="icon-wrench i-alt"></i></a>
-                            </div>
-                            <h3>Construir en nueve pasos</h3>
-                        </div>
-                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
-            </div>
             </div>
         </div>
     </section>
