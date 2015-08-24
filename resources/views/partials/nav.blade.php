@@ -50,7 +50,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ route('laEmpresa') }}"><div>La empresa</div></a>
+                        <a href="{{ route('laEmpresa') }}"><div>Nuestra empresa</div></a>
                     </li>
                     <li>
                         <a href="{{ route('fichaTecnica') }}"><div>Tipos de constricción</div></a>

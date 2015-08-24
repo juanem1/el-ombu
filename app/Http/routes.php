@@ -48,7 +48,7 @@ Route::get('ficha-tecnica', ['as' => 'fichaTecnica', 'uses' => 'StaticsControlle
 Route::get('vivienda', ['as' => 'vivienda', 'uses' => 'StaticsController@vivienda']);
 
 // La empresa
-Route::get('la-empresa', ['as' => 'laEmpresa', 'uses' => 'StaticsController@empresa']);
+Route::get('nuestra-empresa', ['as' => 'laEmpresa', 'uses' => 'StaticsController@empresa']);
 
 // Formas de pago
 Route::get('formas-de-pago', ['as' => 'formasDePago', 'uses' => 'StaticsController@formasDePago']);
