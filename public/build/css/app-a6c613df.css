@@ -29010,5 +29010,15 @@ table form {
   background: url('/img/footer-bg.jpg') repeat;
   background-size: 100% 100%;
 }
+#footer div.map {
+  background: url('/img/world-map.png') no-repeat left center;
+  padding: 20px 0;
+}
+#footer a {
+  color: rgba(255, 255, 255, 0.25);
+}
+#footer .col_one_fourth.col_last {
+  padding: 17px 0;
+}
 
 /*# sourceMappingURL=app.css.map */
