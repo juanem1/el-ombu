@@ -1,6 +1,9 @@
 @import "bootstrap/bootstrap";
 @import "template/template";
 @import "_house_styles";
+@import "_header";
+@import "_primary_menu";
+@import "_footer";
 
 table form {
   margin: 0;
@@ -25,83 +28,13 @@ table form {
   background: -ms-linear-gradient(left, #edce5c 0%,#e3a440 100%); /* IE10+ */
   background: linear-gradient(to right, #edce5c 0%,#e3a440 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edce5c', endColorstr='#e3a440',GradientType=1 ); /* IE6-9 */
-}
-#header.sticky-style-2 {
-  background: url('/img/header.png') repeat;
-  height: 145px;
-  #header-wrap {
-    background-color: @theme-color;
-    height: 45px;
-  }
-}
-#header.dashboard {
-  height: 45px;
-}
-#header.full-header {
-  #logo {
-    margin-right: 0;
-  }
-  #primary-menu > ul {
-    margin-right: 0;
-  }
-  #primary-menu ul ul a {
-    height: auto !important;
-  }
-}
-
-#primary-menu.style-2 {
-  height: 45px;
   text-align: center;
-
-  ul ul {
-    top: 43px;
+  span {
+    font-size: 12px;
   }
-  > div > ul {
-    height: 39px;
-  }
-  > div > ul > li > a {
-    height: 44px;
-    line-height: 47px;
-  }
-  > div > ul > li:hover a {
-    color: @body-color;
-  }
-}
-#primary-menu ul li a {
-  color: @side-header-bg;
 }
 
-@media (min-width: 992px) {
-  #primary-menu.style-2 > div > ul {
-    display: inline-block;
-    float: none;
-  }
-}
-@media only screen and (max-width: 991px) {
-  #primary-menu > ul, #primary-menu > div > ul {
-    margin-top: 50px!important;
-  }
-}
-#primary-menu.style-2 > div > ul ul {
-  text-align: left;
-}
-#primary-menu.style-2 > div > ul > li > a {
-  padding: 0 10px;
-}
-#header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo img {
-  height: 40px;
-  margin: 10px 0;
-}
-#footer {
-  background: url('/img/footer-bg.jpg') repeat; background-size: 100% 100%;
-  div.map {
-    background: url('/img/world-map.png') no-repeat left center;
-    padding: 20px 0;
-  }
-  a {
-    color: rgba(255, 255, 255, 0.25);
-  }
-  .col_one_fourth.col_last{
-    padding: 17px 0;
-  }
+.entry-image {
+  max-height: 200px;
+  min-height: 200px;
 }

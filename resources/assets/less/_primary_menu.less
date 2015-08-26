@@ -1,0 +1,39 @@
+#primary-menu.style-2 {
+  height: 45px;
+  text-align: center;
+
+  ul ul {
+    top: 43px;
+  }
+  > div > ul {
+    height: 39px;
+  }
+  > div > ul > li > a {
+    height: 44px;
+    line-height: 47px;
+  }
+  > div > ul > li:hover a {
+    color: @body-color;
+  }
+}
+#primary-menu ul li a {
+  color: @side-header-bg;
+}
+
+@media (min-width: 992px) {
+  #primary-menu.style-2 > div > ul {
+    display: inline-block;
+    float: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #primary-menu > ul, #primary-menu > div > ul {
+    margin-top: 50px!important;
+  }
+}
+#primary-menu.style-2 > div > ul ul {
+  text-align: left;
+}
+#primary-menu.style-2 > div > ul > li > a {
+  padding: 0 10px;
+}
