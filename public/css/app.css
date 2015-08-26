@@ -28917,33 +28917,6 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 .seven-cols a {
   text-transform: uppercase;
 }
-table form {
-  margin: 0;
-}
-.table-bordered > tbody > tr > td {
-  vertical-align: middle;
-}
-.alert > p,
-.alert > ul {
-  padding-left: 20px;
-}
-.errormsg ul {
-  margin: 0;
-  display: inline-block;
-}
-.price-highlight {
-  background: #edce5c;
-  /* Old browsers */
-  /* FF3.6+ */
-  /* Chrome,Safari4+ */
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
-  background: linear-gradient(to right, #edce5c 0%, #e3a440 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edce5c', endColorstr='#e3a440', GradientType=1);
-  /* IE6-9 */
-}
 #header.sticky-style-2 {
   background: url('/img/header.png') repeat;
   height: 145px;
@@ -28963,6 +28936,10 @@ table form {
 }
 #header.full-header #primary-menu ul ul a {
   height: auto !important;
+}
+#header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo img {
+  height: 40px;
+  margin: 10px 0;
 }
 #primary-menu.style-2 {
   height: 45px;
@@ -29002,10 +28979,6 @@ table form {
 #primary-menu.style-2 > div > ul > li > a {
   padding: 0 10px;
 }
-#header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo img {
-  height: 40px;
-  margin: 10px 0;
-}
 #footer {
   background: url('/img/footer-bg.jpg') repeat;
   background-size: 100% 100%;
@@ -29019,6 +28992,41 @@ table form {
 }
 #footer .col_one_fourth.col_last {
   padding: 17px 0;
+}
+table form {
+  margin: 0;
+}
+.table-bordered > tbody > tr > td {
+  vertical-align: middle;
+}
+.alert > p,
+.alert > ul {
+  padding-left: 20px;
+}
+.errormsg ul {
+  margin: 0;
+  display: inline-block;
+}
+.price-highlight {
+  background: #edce5c;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to right, #edce5c 0%, #e3a440 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edce5c', endColorstr='#e3a440', GradientType=1);
+  /* IE6-9 */
+  text-align: center;
+}
+.price-highlight span {
+  font-size: 12px;
+}
+.entry-image {
+  max-height: 200px;
+  min-height: 200px;
 }
 
 /*# sourceMappingURL=app.css.map */
