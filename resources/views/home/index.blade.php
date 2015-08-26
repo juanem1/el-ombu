@@ -82,7 +82,7 @@
                                         </h3>
                                     </div>
                                     <div class="price-highlight">
-                                        <h3>$ {{ number_format($offer->price, 2, ',', '.') }} <span class="nocolor">pesos argentinos</span></h3>
+                                        <h4>$ {{ number_format($offer->price, 2, ',', '.') }} <small>pesos argentinos</small></h4>
                                     </div>
                                 </div>
                             </div>

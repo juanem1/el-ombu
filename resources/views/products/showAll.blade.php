@@ -36,7 +36,9 @@
                                             <h3>
                                                 <a href="{{ route('oferta.show', $product->slug) }}">{{ $product->title }}</a>
                                             </h3>
-                                            <span>$ {{ $product->price }}</span>
+                                            <div class="price-highlight">
+                                                <h4>$ {{ number_format($product->price, 2, ',', '.') }} <small>pesos argentinos</small></h4>
+                                            </div>
                                         </div>
                                     </article>
                                 </div>
