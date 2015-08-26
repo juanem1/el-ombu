@@ -18,9 +18,6 @@
                 <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
                 <ul>
-                    <li class="current">
-                        <a href="/"><div>Home</div></a>
-                    </li>
                     <li>
                         <a href="{{ route('ofertas') }}"><div>Ofertas</div></a>
                     </li>
