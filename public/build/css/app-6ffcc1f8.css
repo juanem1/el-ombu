@@ -29021,8 +29021,8 @@ table form {
   /* IE6-9 */
   text-align: center;
 }
-.price-highlight span {
-  font-size: 12px;
+.price-highlight h4 {
+  padding: 5px 0;
 }
 .entry-image {
   max-height: 200px;
