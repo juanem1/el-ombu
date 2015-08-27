@@ -22,6 +22,62 @@
   }
 }
 
-.seven-cols a {
-  text-transform: uppercase;
+.seven-cols {
+  .wrapper {
+
+    &:hover {
+      .circle {
+        background-color: #333;
+      }
+      .label {
+        color: #333;
+      }
+    }
+
+    .circle {
+      background-color: @theme-color;
+      border-radius: 50%;
+      display: inline-block;
+      height: 99px;
+      text-transform: uppercase;
+      transition: color 0.5s, box-shadow 0.5s, background-color 0.5s;
+      width: 99px;
+
+      i {
+        display: inline-block;
+        height: 42px;
+        margin: 26px auto 0;
+        width: 42px;
+      }
+
+      .clasico {
+        background: url('/img/houses_styles/clasico.png') no-repeat;
+      }
+      .nova-premium {
+        background: url('/img/houses_styles/novapremium.png') no-repeat;
+      }
+      .rustico {
+        background: url('/img/houses_styles/rustico.png') no-repeat;
+      }
+      .alpina {
+        background: url('/img/houses_styles/alpina.png') no-repeat;
+      }
+      .tradicional {
+        background: url('/img/houses_styles/tradicional.png') no-repeat;
+      }
+      .minimalista {
+        background: url('/img/houses_styles/minimalista.png') no-repeat;
+      }
+      .comercial {
+        background: url('/img/houses_styles/comercial.png') no-repeat;
+      }
+    }
+
+    .label {
+      color: @theme-color;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
 }

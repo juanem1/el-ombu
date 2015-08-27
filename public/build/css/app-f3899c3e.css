@@ -28914,7 +28914,51 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
     width: 14.2857142857%;
   }
 }
-.seven-cols a {
+.seven-cols .wrapper:hover .circle {
+  background-color: #333;
+}
+.seven-cols .wrapper:hover .label {
+  color: #333;
+}
+.seven-cols .wrapper .circle {
+  background-color: #5fa344;
+  border-radius: 50%;
+  display: inline-block;
+  height: 99px;
+  text-transform: uppercase;
+  transition: color 0.5s, box-shadow 0.5s, background-color 0.5s;
+  width: 99px;
+}
+.seven-cols .wrapper .circle i {
+  display: inline-block;
+  height: 42px;
+  margin: 26px auto 0;
+  width: 42px;
+}
+.seven-cols .wrapper .circle .clasico {
+  background: url('/img/houses_styles/clasico.png') no-repeat;
+}
+.seven-cols .wrapper .circle .nova-premium {
+  background: url('/img/houses_styles/novapremium.png') no-repeat;
+}
+.seven-cols .wrapper .circle .rustico {
+  background: url('/img/houses_styles/rustico.png') no-repeat;
+}
+.seven-cols .wrapper .circle .alpina {
+  background: url('/img/houses_styles/alpina.png') no-repeat;
+}
+.seven-cols .wrapper .circle .tradicional {
+  background: url('/img/houses_styles/tradicional.png') no-repeat;
+}
+.seven-cols .wrapper .circle .minimalista {
+  background: url('/img/houses_styles/minimalista.png') no-repeat;
+}
+.seven-cols .wrapper .circle .comercial {
+  background: url('/img/houses_styles/comercial.png') no-repeat;
+}
+.seven-cols .wrapper .label {
+  color: #5fa344;
+  text-align: center;
   text-transform: uppercase;
 }
 #header.sticky-style-2 {
