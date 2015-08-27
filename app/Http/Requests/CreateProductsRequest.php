@@ -24,10 +24,10 @@ class CreateProductsRequest extends Request
 	{
 		return [
             'title' => 'required',
-            //'subTitle' => 'required',
             'shortDescription' => 'required',
-            //'longDescription' => 'required',
             'price' => 'required|numeric',
+            'gallery_id' => 'numeric',
+            'style_id' => 'numeric'
 		];
 	}
 

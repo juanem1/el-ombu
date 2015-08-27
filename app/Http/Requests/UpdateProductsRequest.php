@@ -27,8 +27,9 @@ class UpdateProductsRequest extends Request
             'subTitle' => 'required',
             'shortDescription' => 'required',
             'longDescription' => 'required',
-            'price' => 'required|numeric'
-            //'pdf' => 'required'
+            'price' => 'required|numeric',
+            'gallery_id' => 'numeric',
+            'style_id' => 'numeric'
 		];
 	}
 
