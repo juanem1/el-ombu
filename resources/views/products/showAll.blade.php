@@ -19,6 +19,11 @@
                                         <!-- Portfolio Image -->
                                         <div class="portfolio-image">
                                             <a href="#">
+                                                @if ($product->style)
+                                                    <span class="house-style-img-label">
+                                                        ESTILO {{$product->style->name}}
+                                                    </span>
+                                                @endif
                                                 @if(count($product->images) > 0)
                                                     {!! Html::image('/img/images/' . $product->images->first()->name, $product->name) !!}
                                                 @endif

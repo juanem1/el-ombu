@@ -19,6 +19,11 @@
                                         <!-- Portfolio Image -->
                                         <div class="portfolio-image">
                                             <a href="#">
+                                                @if ($offer->products->style)
+                                                    <span class="house-style-img-label">
+                                                        ESTILO {{$offer->products->style->name}}
+                                                    </span>
+                                                @endif
                                                 @if(count($offer->products->images) > 0)
                                                     <img src="/img/images/{{ $offer->products->images->first()->name }}" alt="Portfolio Title" />
                                                 @endif
