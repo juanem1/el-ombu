@@ -2,6 +2,7 @@
 
 use Kris\LaravelFormBuilder\Form;
 use App\Gallery;
+use App\Styles;
 
 class Products extends Form
 {
@@ -16,6 +17,10 @@ class Products extends Form
             ->add('gallery_id', 'select', [
                 'label' => 'Galeria Asociada',
                 'choices' => Gallery::lists('title', 'id')
+            ])
+            ->add('style_id', 'select', [
+                'label' => 'Estilo de la casa',
+                'choices' => Styles::lists('name', 'id')
             ])
             ->add('save', 'submit',
                 [
