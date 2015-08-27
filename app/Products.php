@@ -10,11 +10,16 @@ class Products extends Model {
         'shortDescription',
         'longDescription',
         'price',
-        'pdf'
+        'gallery_id',
+        'style_id'
     ];
 
 	public function images() {
         return $this->hasMany('App\Images', 'gallery_id', 'gallery_id');
+    }
+
+    public function style() {
+        return $this->hasOne('App\Styles', 'id', 'style_id');
     }
 
 }
