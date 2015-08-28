@@ -87,8 +87,6 @@
 
 
 @section('scripts')
-    <script type="text/javascript" src="js/jquery.camera.js"></script>
-    {{-- Slider --}}
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $('#camera_wrap_1').camera({
