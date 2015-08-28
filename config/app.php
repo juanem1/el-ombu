@@ -135,7 +135,7 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-        //'GrahamCampbell\Markdown\MarkdownServiceProvider',
+        'GrahamCampbell\Markdown\MarkdownServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -201,7 +201,7 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
         'Image'     => 'Intervention\Image\Facades\Image',
-        //'Markdown'  => 'GrahamCampbell\Markdown\Facades\Markdown',
+        'Markdown' => 'GrahamCampbell\Markdown\Facades\Markdown',
         'FormBuilder' => 'Kris\LaravelFormBuilder\Facades\FormBuilder',
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',

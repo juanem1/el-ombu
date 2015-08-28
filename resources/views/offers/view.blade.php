@@ -12,10 +12,7 @@
             <div class="container clearfix">
                 <div class="col_two_third">
 
-                    {{--{!! Markdown::convertToHtml() !!}--}}
-                    <p>
-                        {{$offer->products->longDescription}}
-                    </p>
+                    {!! Markdown::convertToHtml($offer->products->longDescription) !!}
 
                     <div class="promo promo-dark promo-flat">
                         <h3>TODO A TAN SOLO <span>$ {{ $offer->price }}<sup>*</sup> </span></h3>
