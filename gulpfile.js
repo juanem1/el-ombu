@@ -17,7 +17,8 @@ elixir(function(mix) {
     		'plugins.js',
     		'functions.js',
     		'jquery.camera.js',
-    		'simplemde.min.js'
+    		'simplemde.min.js',
+    		'customToolbar.js'
     	],
         './public/js/app.js'
     );
