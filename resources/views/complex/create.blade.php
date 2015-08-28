@@ -14,5 +14,15 @@
             </div>
         </div>
     </section>
+@endsection
 
+@section('scripts')
+    <script>
+        var simplemde = new SimpleMDE({
+            element: document.getElementById("description"),
+            spellChecker: false,
+            toolbar: toolbar
+        });
+        simplemde.render();
+    </script>
 @endsection

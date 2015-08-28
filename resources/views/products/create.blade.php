@@ -19,3 +19,21 @@
     </section>
 
 @endsection
+
+@section('scripts')
+    <script>
+        var simplemde = new SimpleMDE({
+            element: document.getElementById("shortDescription"),
+            spellChecker: false,
+            toolbar: toolbar
+        });
+        simplemde.render();
+
+        var simplemde2 = new SimpleMDE({
+            element: document.getElementById("longDescription"),
+            spellChecker: false,
+            toolbar: toolbar
+        });
+        simplemde.render();
+    </script>
+@endsection
