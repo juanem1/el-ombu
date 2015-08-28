@@ -38,9 +38,7 @@
                                         </div>
                                         <!-- Portfolio Description -->
                                         <div class="portfolio-desc">
-                                            <h3>
-                                                <a href="{{ route('oferta.show', $product->slug) }}">{{ $product->title }}</a>
-                                            </h3>
+                                            <h3>{{ $product->title }}</h3>
                                             <div class="price-highlight">
                                                 <h4>$ {{ number_format($product->price, 2, ',', '.') }} <small>pesos argentinos</small></h4>
                                             </div>
