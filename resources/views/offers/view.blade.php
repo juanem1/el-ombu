@@ -12,6 +12,7 @@
             <div class="container clearfix">
                 <div class="col_two_third">
 
+                    {!! Markdown::convertToHtml($offer->products->shortDescription) !!}
                     {!! Markdown::convertToHtml($offer->products->longDescription) !!}
 
                     <div class="promo promo-dark promo-flat">
