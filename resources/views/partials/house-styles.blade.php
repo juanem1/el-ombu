@@ -3,7 +3,7 @@
     <div class="row seven-cols">
         <div class="col-md-1 text-center">
             <div class="wrapper">
-                <a class="circle" href="#">
+                <a class="circle i-alt" href="#">
                     <i class="clasico"></i>
                 </a>
                 <a class="label" href="#">Clasico</a>
@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-1 text-center">
             <div class="wrapper">
-                <a class="circle" href="#">
+                <a class="circle i-alt" href="#">
                     <i class="nova-premium"></i>
                 </a>
                 <a class="label" href="#">Nova Premium</a>
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-1 text-center">
             <div class="wrapper">
-                <a class="circle" href="#">
+                <a class="circle i-alt" href="#">
                     <i class="rustico"></i>
                 </a>
                 <a class="label" href="#">Rustico</a>
@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-1 text-center">
             <div class="wrapper">
-                <a class="circle" href="#">
+                <a class="circle i-alt" href="#">
                     <i class="alpina"></i>
                 </a>
                 <a class="label" href="#">Alpina</a>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-md-1 text-center">
             <div class="wrapper">
-                <a class="circle" href="#">
+                <a class="circle i-alt" href="#">
                     <i class="tradicional"></i>
                 </a>
                 <a class="label" href="#">Tradicional</a>
@@ -43,7 +43,7 @@
         </div>
         <div class="col-md-1 text-center">
             <div class="wrapper">
-                <a class="circle" href="#">
+                <a class="circle i-alt" href="#">
                     <i class="minimalista"></i>
                 </a>
                 <a class="label" href="#">Minimalista</a>
@@ -51,7 +51,7 @@
         </div>
         <div class="col-md-1 text-center">
             <div class="wrapper">
-                <a class="circle" href="#">
+                <a class="circle i-alt" href="#">
                     <i class="comercial"></i>
                 </a>
                 <a class="label" href="#">Comercial</a>

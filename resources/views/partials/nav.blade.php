@@ -5,7 +5,7 @@
             <a href="/" class="standard-logo" data-dark-logo="/img/logo.png">
                 <img class="divcenter" src="/img/logo.png" alt="El Ombu logo" height="100px" width="auto" />
             </a>
-            <a href="/" class="retina-logo" data-dark-logo="/images/logo.png">
+            <a href="/" class="retina-logo" data-dark-logo="/img/logo.png">
                 <img class="divcenter" src="/img/logo.png" alt="El Ombu logo" />
             </a>
         </div>
