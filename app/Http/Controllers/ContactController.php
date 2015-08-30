@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller {
 
@@ -18,13 +16,22 @@ class ContactController extends Controller {
 	}
 
 	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
+	 * Send an email and redirect to the contact page
+	 * @param $request
 	 */
-	public function store()
+	public function store(ContactRequest $request)
 	{
+        \Mail::send('emails.contact', $request->all(), function($message) use ($request)
+        {
+            $message
+                ->to(env('MAIL_TO_ADDRESS'), env('MAIL_TO_NAME'))
+                ->replyTo($request->email, $request->name)
+                ->subject('Contacto web');
+        });
 
+        return redirect()
+            ->route('contact.index')
+            ->withSuccess('Su consulta ha sido enviada con éxito.');
 	}
 
 }
