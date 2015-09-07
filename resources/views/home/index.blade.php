@@ -93,6 +93,7 @@
                 thumbnails: true,
                 height: '40%',
                 loader: 'pie',
+                playPause: false,
                 fx: 'scrollHorz',
                 loaderPadding: 1,
                 loaderStroke: 5,
