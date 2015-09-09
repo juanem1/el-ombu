@@ -29045,8 +29045,7 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
   padding: 0 10px;
 }
 #footer {
-  background: url('/img/footer-bg.jpg') repeat;
-  background-size: 100% 100%;
+  background-color: #5fa344;
 }
 #footer div.map {
   background: url('/img/world-map.png') no-repeat left center;
@@ -29090,7 +29089,7 @@ table form {
   padding: 5px 0;
 }
 .entry-image {
-  max-height: 200px;
+  max-height: 100%;
   min-height: 200px;
 }
 

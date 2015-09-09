@@ -109,7 +109,7 @@
                 </div>
                 <div class="col_one_third col_last">
                     <div class="center">
-                        <img src="/img/tecnica/fondotecnica.jpg" alt="Fondo caracteristicas tecnicas" />
+                        <img src="/img/ficha-tecnica.jpg" alt="Fondo caracteristicas tecnicas" />
                     </div>
 
                     <div class="divider divider-rounded divider-center"><i class="icon-home"></i></div>
@@ -127,7 +127,7 @@
                     <div class="divider divider-rounded divider-center"><i class="icon-home"></i></div>
 
                     <div class="center">
-                        <img src="/img/tecnica/marcas.jpg" alt="Marcas usadas para la construccion" />
+                        <img src="/img/ficha-tecnica-marcas.jpg" alt="Marcas usadas para la construccion" />
                     </div>
                 </div>
 
