@@ -4,7 +4,7 @@
         <div class="col-md-1 text-center">
             <div class="wrapper">
                 <a class="circle i-alt" href="#">
-                    <i class="clasico"></i>
+                    <i class="style style-clasico"></i>
                 </a>
                 <a class="label" href="#">Clasico</a>
             </div>
@@ -12,7 +12,7 @@
         <div class="col-md-1 text-center">
             <div class="wrapper">
                 <a class="circle i-alt" href="#">
-                    <i class="nova-premium"></i>
+                    <i class="style style-nova-premium"></i>
                 </a>
                 <a class="label" href="#">Nova Premium</a>
             </div>
@@ -20,7 +20,7 @@
         <div class="col-md-1 text-center">
             <div class="wrapper">
                 <a class="circle i-alt" href="#">
-                    <i class="rustico"></i>
+                    <i class="style style-rustico"></i>
                 </a>
                 <a class="label" href="#">Rustico</a>
             </div>
@@ -28,7 +28,7 @@
         <div class="col-md-1 text-center">
             <div class="wrapper">
                 <a class="circle i-alt" href="#">
-                    <i class="alpina"></i>
+                    <i class="style style-alpina"></i>
                 </a>
                 <a class="label" href="#">Alpina</a>
             </div>
@@ -36,7 +36,7 @@
         <div class="col-md-1 text-center">
             <div class="wrapper">
                 <a class="circle i-alt" href="#">
-                    <i class="tradicional"></i>
+                    <i class="style style-tradicional"></i>
                 </a>
                 <a class="label" href="#">Tradicional</a>
             </div>
@@ -44,7 +44,7 @@
         <div class="col-md-1 text-center">
             <div class="wrapper">
                 <a class="circle i-alt" href="#">
-                    <i class="minimalista"></i>
+                    <i class="style style-minimalista"></i>
                 </a>
                 <a class="label" href="#">Minimalista</a>
             </div>
@@ -52,7 +52,7 @@
         <div class="col-md-1 text-center">
             <div class="wrapper">
                 <a class="circle i-alt" href="#">
-                    <i class="comercial"></i>
+                    <i class="style style-comercial"></i>
                 </a>
                 <a class="label" href="#">Comercial</a>
             </div>
