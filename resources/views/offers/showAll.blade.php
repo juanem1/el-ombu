@@ -28,14 +28,14 @@
                                                     <img src="/img/images/{{ $offer->products->images->first()->name }}" alt="Portfolio Title" />
                                                 @endif
                                             </a>
-                                            @if(count($offer->products->images) > 0)
-                                                <div class="portfolio-overlay" data-lightbox="gallery">
-                                                    @foreach($offer->products->images as $image)
-                                                        <a href="/img/images/{{ $image->name }}" class="left-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-                                                    @endforeach
+                                            <div class="portfolio-overlay" data-lightbox="gallery">
+                                                @if(count($offer->products->images) > 0)
+                                                    {!! Html::gallery($offer->products->images, 'left-icon') !!}
                                                     <a href="{{ route('oferta.show', $offer->slug) }}" class="right-icon"><i class="icon-line-plus"></i></a>
-                                                </div>
-                                            @endif
+                                                @else
+                                                    <a href="{{ route('oferta.show', $offer->slug) }}" class="center-icon"><i class="icon-line-plus"></i></a>
+                                                @endif
+                                            </div>
                                         </div>
                                         <!-- Portfolio Description -->
                                         <div class="portfolio-desc">

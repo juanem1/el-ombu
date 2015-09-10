@@ -55,3 +55,16 @@ Route::get('nuestra-empresa', ['as' => 'laEmpresa', 'uses' => 'StaticsController
 
 // Formas de pago
 Route::get('formas-de-pago', ['as' => 'formasDePago', 'uses' => 'StaticsController@formasDePago']);
+
+
+Html::macro('gallery', function($images, $icon) {
+    $first = $images->shift();
+    $html = '<a href="/img/images/'.$first->name.'" class="'.$icon.'" data-lightbox="gallery-item">';
+    $html .= '<i class="icon-line-stack-2"></i>';
+    $html .= '</a>';
+    foreach ($images as $image) {
+        $html .= '<a href="/img/images/'.$image->name.'" class="hide" data-lightbox="gallery-item"></a>';
+    }
+
+    return $html;
+});
