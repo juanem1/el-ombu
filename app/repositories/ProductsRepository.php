@@ -36,4 +36,13 @@ class ProductsRepository
         return Products::create($data);
     }
 
+    /**
+     * Get all with
+     * @return mixed
+     */
+    public function fromStyle($id)
+    {
+        return Products::whereStyleId($id)->get();
+    }
+
 }

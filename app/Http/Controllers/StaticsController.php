@@ -1,12 +1,11 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\Gallery;
 use App\Repositories\ComplexRepository;
 use App\Repositories\ProductsRepository;
-use Illuminate\Http\Request;
 use App\Repositories\OffersRepository;
+use App\Styles;
 
 class StaticsController extends Controller {
 
@@ -98,5 +97,21 @@ class StaticsController extends Controller {
     {
         $params = $repo->view($slug);
         return view('complex.view', $params);
+    }
+
+    /**
+     * Show the list of offers with one style
+     * @param $slug
+     * @param $repo
+     * @return \Illuminate\View\View
+     */
+    public function styles($slug, ProductsRepository $repo)
+    {
+        $style = Styles::whereSlug($slug)->first();
+        $products = $repo->fromStyle($style->id);
+
+        dd($products);
+
+        return view('gallery.view', compact('gallery'));
     }
 }

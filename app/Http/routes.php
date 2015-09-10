@@ -37,6 +37,9 @@ Route::get('productos-y-precios', ['as' => 'products.show', 'uses' => 'StaticsCo
 Route::get('contacto', ['as' => 'contact.index', 'uses' => 'ContactController@index']);
 Route::post('contacto', ['as' => 'contact.store', 'uses' => 'ContactController@store']);
 
+// Estilos
+Route::get('estilo/{slug}', ['as' => 'estilo.show', 'uses' => 'StaticsController@styles']);
+
 // -------------
 // STATICS
 // -------------
