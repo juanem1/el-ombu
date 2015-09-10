@@ -42,7 +42,7 @@ class ProductsRepository
      */
     public function fromStyle($id)
     {
-        return Products::whereStyleId($id)->get();
+        return Products::with('images')->whereStyleId($id)->get();
     }
 
 }

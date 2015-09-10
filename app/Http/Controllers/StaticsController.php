@@ -108,10 +108,14 @@ class StaticsController extends Controller {
     public function styles($slug, ProductsRepository $repo)
     {
         $style = Styles::whereSlug($slug)->first();
+
+        if ($style === null) {
+            abort(404);
+        }
+
         $products = $repo->fromStyle($style->id);
+        $title = $style->name;
 
-        dd($products);
-
-        return view('gallery.view', compact('gallery'));
+        return view('styles.showAll', compact('title', 'products'));
     }
 }
