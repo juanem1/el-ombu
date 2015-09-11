@@ -30,13 +30,7 @@
                                             </a>
                                             @if(count($product->images) > 0)
                                                 <div class="portfolio-overlay" data-lightbox="gallery">
-                                                    @foreach($product->images as $image)
-                                                        <a href="/img/images/{{ $image->name }}" class="center-icon" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-                                                    @endforeach
-                                                </div>
-                                                <div class="portfolio-overlay">
-                                                    <a href="images/portfolio/full/1.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
-                                                    <a href="portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+                                                    {!! Html::gallery($product->images, 'center-icon') !!}
                                                 </div>
                                             @endif
                                         </div>
