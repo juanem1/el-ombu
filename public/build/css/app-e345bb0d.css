@@ -29066,12 +29066,18 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 #footer.dark {
   background-color: #5fa344;
 }
+#footer.dark .social-icon.si-borderless {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+#footer #copyrights {
+  color: rgba(255, 255, 255, 0.8);
+}
 #footer div.map {
   background: url('/img/world-map.png') no-repeat left center;
   padding: 20px 0;
 }
 #footer a {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.8);
 }
 #footer .col_one_fourth.col_last {
   padding: 17px 0;
