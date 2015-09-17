@@ -26,7 +26,7 @@ class ContactController extends Controller {
             $message
                 ->to(env('MAIL_TO_ADDRESS'), env('MAIL_TO_NAME'))
                 ->replyTo($request->email, $request->name)
-                ->subject('Contacto web');
+                ->subject('Contacto desde la pagina web Viviendas EL OMBU');
         });
 
         return redirect()
