@@ -37,29 +37,36 @@
                         </div>
                     </div>
                 </div>
+                <div class="clearfix topmargin">
+                    <div class="clearfix">
+                        <a href="skype:viviendaselombu?call" class="social-icon si-dark si-colored si-skype">
+                            <i class="icon-skype"></i>
+                            <i class="icon-skype"></i>
+                        </a>
+                        <a href="http://www.facebook.com/profile.php?id=100003319374692" class="social-icon si-dark si-colored si-facebook">
+                            <i class="icon-facebook"></i>
+                            <i class="icon-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon si-dark si-colored si-twitter">
+                            <i class="icon-twitter"></i>
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <div>
+                            Copyrights © 2015 Viviendas el Ombú.
+                        </div>
+                        <div>
+                            <a href="http://ideasbox.com.ar">Design by ibox</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col_one_fourth col_last tright nobottommargin">
-                <div>
-                    Copyrights © 2015 Viviendas el Ombú.
-                </div>
-                <div>
-                    <a href="http://ideasbox.com.ar">Design by ibox</a>
-                </div>
-                <div class="fright clearfix">
-                    <a href="http://www.facebook.com/profile.php?id=100003319374692" class="social-icon si-small si-borderless si-facebook">
-                        <i class="icon-facebook"></i>
-                        <i class="icon-facebook"></i>
-                    </a>
-                    <a href="#" class="social-icon si-small si-borderless si-twitter">
-                        <i class="icon-twitter"></i>
-                        <i class="icon-twitter"></i>
-                    </a>
-                    <a href="skype:viviendaselombu?call" class="social-icon si-small si-borderless si-skype">
-                        <i class="icon-skype"></i>
-                        <i class="icon-skype"></i>
-                    </a>
-                </div>
+                <a href="{{ route('contact.index') }}">
+                    <img src="/img/beneficiosparamercosur.png" class="img-responsive" alt="Grandes descuentos para Mercosur" />
+                </a>
             </div>
         </div>
     </div>
